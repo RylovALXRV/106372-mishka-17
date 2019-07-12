@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>Вязание на заказ</title>
+  </head>
+  <body>
+
+    <header class="page-header">
+      <nav class="navigation">
+        <a class="navigation-logo" href="index.html">
+          <img src="#" alt="Логотип интернет-магазина 'Мишка'">
+        </a>
+        <button class="navigation__btn" type="button">Открыть навигацию пользователя</button>
+        <div class="navigation__wrapper user-navigation">
+          <a class="user-navigation__link menu" href="catalog.html">Каталог товаров</a>
+          <a class="user-navigation__link">Вязание на&nbsp;заказ</a>
+          <form action="https://echo.htmlacademy.ru" method="get" class="search-form">
+            <label class="visually-hidden" for="search">Поиск по сайту</label>
+            <input class="search-form__input" type="search" name="search-field" id="search"
+                   placeholder="Поиск по сайту" required>
+            <button class="search-form__btn" type="button">Найти</button>
+          </form>
+          <a class="user-navigation__link user-navigation__link--basket" href="#">Корзина: пока пуста</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Вязание на заказ</h1>
+      <section class="feedback">
+        <h2 class="visually-hidden">Обратная связь по заказам товаров</h2>
+        <p class="feedback__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
+          свяжемся с вами, чтобы уточнить детали.</p>
+        <form action="https://echo.htmlacademy.ru" method="post" class="feedback-form">
+          <section class="feedback-form__item catalog-filter">
+            <h2 class="catalog-filter__legend feedback-header">Тип</h2>
+            <ul class="catalog-filter__list radio-filter">
+              <li class="radio-filter__item">
+                <input class="radio-filter__input" type="radio" name="handwork-field" id="handwork-interior"
+                       value="interior" checked>
+                <label for="handwork-interior" class="radio-filter__label">Аксессуар для интерьера</label>
+              </li>
+              <li class="radio-filter__item">
+                <input class="radio-filter__input" type="radio" name="handwork-field" id="handwork-toys" value="toys">
+                <label for="handwork-toys" class="radio-filter__label">Детская игрушка</label>
+              </li>
+            </ul>
+          </section>
+          <section class="feedback-form__item catalog-filter">
+            <h2 class="catalog-filter__legend feedback-header">Цвет</h2>
+            <ul class="catalog-filter__list checkbox-filter">
+              <li class="checkbox-filter__item">
+                <input class="checkbox-filter__input" type="checkbox" name="white-field" id="white-color" checked>
+                <label class="checkbox-filter__label" for="white-color">Белый</label>
+              </li>
+              <li class="checkbox-filter__item">
+                <input class="checkbox-filter__input" type="checkbox" name="gray-field" id="gray-color" checked>
+                <label class="checkbox-filter__label" for="gray-color">Серый</label>
+              </li>
+              <li class="checkbox-filter__item">
+                <input class="checkbox-filter__input" type="checkbox" name="tiffany-field" id="tiffany-color">
+                <label class="checkbox-filter__label" for="tiffany-color">«Тиффани»</label>
+              </li>
+              <li class="checkbox-filter__item">
+                <input class="checkbox-filter__input" type="checkbox" name="black-field" id="black-color">
+                <label class="checkbox-filter__label" for="black-color">Черный</label>
+              </li>
+              <li class="checkbox-filter__item">
+                <input class="checkbox-filter__input" type="checkbox" name="pink-field" id="pink-color">
+                <label class="checkbox-filter__label" for="pink-color">Розовый</label>
+              </li>
+              <li class="checkbox-filter__item">
+                <input class="checkbox-filter__input" type="checkbox" name="orange-field" id="orange-color">
+                <label class="checkbox-filter__label" for="orange-color">Оранжевый</label>
+              </li>
+            </ul>
+          </section>
+          <section class="feedback-form__item contacts">
+            <h2 class="contacts__legend feedback-header">ФИО</h2>
+            <p class="contacts__item">
+              <label class="contacts__label" for="name">Имя:</label>
+              <input class="contacts__input" type="text" name="name-field" id="name" placeholder="Введите ваше имя*"
+                     required>
+            </p>
+            <p class="contacts__item">
+              <label class="contacts__label" for="surname">Фамилия:</label>
+              <input class="contacts__input" type="text" name="surname-field" id="surname"
+                     placeholder="Укажите фамилию*" required>
+            </p>
+            <p class="contacts__item">
+              <label class="contacts__label" for="patronymic">Отчество:</label>
+              <input class="contacts__input" type="text" name="patronymic-field" id="patronymic"
+                     placeholder="Отчество, если желаете">
+            </p>
+            <p class="contacts__item">
+              <label class="contacts__label feedback-header" for="telephone">Тел</label>
+              <input class="contacts__input" type="tel" name="telephone-field" id="telephone"
+                     placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+            </p>
+            <p class="contacts__item">
+              <label class="contacts__label feedback-header" for="email">E-mail</label>
+              <input class="contacts__input" type="email" name="email-field" id="email" placeholder="Ваш Email*"
+                     required>
+            </p>
+            <p class="contacts__item">
+              <label class="contacts__label feedback-header" for="additional">Доп</label>
+              <textarea class="contacts__textarea" name="additional-field" id="additional"
+                        placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </p>
+            <p class="contacts__text"><sup>*</sup>Поля обязательны для заполнения</p>
+          </section>
+          <button class="feedback-form__btn btn" type="submit">Отправить заказ</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <section class="page-footer__social social">
+        <h2 class="visually-hidden">Группы в соц.сетях</h2>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__btn" href="#">Группа в инстаграмме</a>
+          </li>
+          <li class="social__item">
+            <a class="social__btn" href="#">Группа в фейсбуке</a>
+          </li>
+          <li class="social__item">
+            <a class="social__btn" href="#">Группа в твиттере</a>
+          </li>
+        </ul>
+      </section>
+      <div class="page-footer__copyright copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__logo-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="copyright__logo-img" src="#" alt="Логотип HTML Academy">
+        </a>
+      </div>
+    </footer>
+
+  </body>
+</html>

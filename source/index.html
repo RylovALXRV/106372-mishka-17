@@ -16,13 +16,13 @@
         </a>
         <button class="navigation__btn" type="button">Открыть навигацию пользователя</button>
         <div class="navigation__wrapper user-navigation">
-          <a class="user-navigation__link menu" href="catalog.html">Каталог товаров</a>
+          <a class="user-navigation__link" href="catalog.html">Каталог товаров</a>
           <a class="user-navigation__link" href="order.html">Вязание на&nbsp;заказ</a>
           <form action="https://echo.htmlacademy.ru" method="get" class="search-form">
             <label class="visually-hidden" for="search">Поиск по сайту</label>
             <input class="search-form__input" type="search" name="search-field" id="search"
                   placeholder="Поиск по сайту" required>
-            <button class="search-form__btn" type="button">Найти</button>
+            <button class="search-form__btn" type="submit">Найти</button>
           </form>
           <a class="user-navigation__link user-navigation__link--basket" href="#">Корзина: пока пуста</a>
         </div>
@@ -41,33 +41,25 @@
           </li>
         </ul>
       </section>
-      <section class="item-week">
-        <h2 class="item-week__header">Вязаные козинки
-          <span class="item-week__text">товар недели</span>
+      <section class="popular-item">
+        <h2 class="popular-item__header">Вязаные козинки
+          <span class="popular-item__text">товар недели</span>
         </h2>
-        <ul class="item-week__list">
-          <li class="characteristic-item">
-            <dl>
-              <dt class="characteristic-item__term">Цвет</dt>
-              <dd class="characteristic-item__description">«Тиффани»/серый</dd>
-            </dl>
-          </li>
-          <li class="characteristic-item">
-            <dl>
-              <dt class="characteristic-item__term">Диаметр</dt>
-              <dd class="characteristic-item__description">25 см</dd>
-            </dl>
-          </li>
-          <li class="characteristic-item">
-            <dl>
-              <dt class="characteristic-item__term">Высота</dt>
-              <dd class="characteristic-item__description">15 см</dd>
-            </dl>
-          </li>
-        </ul>
-        <img class="item-week__img" src="#" alt="Вязаные корзинки">
-        <p class="item-week__price">Цена:<span class="js-price">990 руб.</span></p>
-        <a class="item-week__btn btn" href="#">Заказать</a>
+        <table class="features">
+          <tr class="features__row">
+            <td>Цвет</td>
+            <td>Диаметр</td>
+            <td>Высота</td>
+          </tr>
+          <tr class="features__row">
+            <td>«Тиффани»/серый</td>
+            <td>25 см</td>
+            <td>15 см</td>
+          </tr>
+        </table>
+        <img class="popular-item__img" src="#" alt="Вязаные корзинки">
+        <p class="popular-item__price">Цена:<span class="js-price">990 руб.</span></p>
+        <a class="popular-item__btn btn" href="#">Заказать</a>
       </section>
       <section class="info">
         <h2 class="info__header">Коротко о нас:</h2>
@@ -83,13 +75,15 @@
       <section class="reviews">
         <h2 class="reviews__header">Отзывы</h2>
         <div class="reviews__list">
-          <blockquote class="reviews__item review">
-            <p class="review__text">Я&nbsp;молодая мама, но&nbsp;всё равно фотографии не&nbsp;набирали и&nbsp;близко
-              такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я&nbsp;накупила аксессуаров и&nbsp;игрушек
-              в&nbsp;Мишке, и&nbsp;мои фотографии сразу стали более стильными, а&nbsp;также набирают больше лайков!</p>
-            <cite class="reviews__full-name">Анастасия Красильникова</cite>
-            <cite class="reviews__nickname">@misssssiskras</cite>
-          </blockquote>
+          <div class="reviews__wrapper">
+            <blockquote class="reviews__item review">
+              <p class="review__text">Я&nbsp;молодая мама, но&nbsp;всё равно фотографии не&nbsp;набирали и&nbsp;близко
+                такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я&nbsp;накупила аксессуаров и&nbsp;игрушек
+                в&nbsp;Мишке, и&nbsp;мои фотографии сразу стали более стильными, а&nbsp;также набирают больше лайков!</p>
+              <cite class="reviews__full-name">Анастасия Красильникова</cite>
+              <cite class="reviews__nickname">@misssssiskras</cite>
+            </blockquote>
+          </div>
           <div class="reviews__controls">
             <button class="reviews__control">Предыдущий отзыв</button>
             <button class="reviews__control">Следующий отзыв</button>
@@ -99,11 +93,11 @@
       </section>
       <section class="contacts">
         <h2 class="contacts__header">Контакты</h2>
-        <address class="contacts__item contacts__email">
+        <address class="contacts__item contacts__item--email">
           <p class="contacts__header-item">e-mail:</p>
           <a class="contacts__email-link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
         </address>
-        <address class="contacts__item contacts__address">
+        <address class="contacts__item contacts__item--address">
           <p class="contacts__header-item">адрес:</p>
           <p class="contacts__address">г. Санкт-Петербург,
             ул. Большая Конюшенная,
@@ -144,19 +138,24 @@
     <div class="modal-wrapper">
       <section class="modal modal-basket">
         <h2 class="modal-basket__header">Добавить в корзину</h2>
-        <p class="modal-basket__choose-size">Выберите размер:</p>
-        <ul class="modal-basket__list-size">
-          <li class="modal-basket__item-size">
-            <button class="modal-basket__btn-size btn">s</button>
-          </li>
-          <li class="modal-basket__item-size">
-            <button class="modal-basket__btn-size btn">m</button>
-          </li>
-          <li class="modal-basket__item-size">
-            <button class="modal-basket__btn-size btn">l</button>
-          </li>
-        </ul>
-        <a class="modal-basket__btn btn" href="#">Добавить</a>
+        <form action="https://echo.htmlacademy.ru" method="get" class="basket-form">
+          <p class="basket-form__text">Выберите размер:</p>
+          <ul class="switcher">
+            <li class="switcher__item">
+              <input class="switcher__input" type="radio" name="size" id="size-small" value="small" checked>
+              <label class="switcher__label btn" for="size-small">s</label>
+            </li>
+            <li class="switcher__item">
+              <input class="switcher__input" type="radio" name="size" id="size-middle" value="middle">
+              <label class="switcher__label btn" for="size-middle">m</label>
+            </li>
+            <li class="switcher__item">
+              <input class="switcher__input" type="radio" name="size" id="size-large" value="large">
+              <label class="switcher__label btn" for="size-large">l</label>
+            </li>
+          </ul>
+          <button class="basket-form__btn btn" type="submit">Добавить</button>
+        </form>
       </section>
     </div>
 

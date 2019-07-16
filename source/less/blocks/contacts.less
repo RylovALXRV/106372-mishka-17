@@ -1,0 +1,30 @@
+.contacts {
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.contacts__header {
+  .font-main-header(18px);
+}
+
+.contacts__item {
+  font-style: normal;
+}
+
+.contacts__email-link {
+  border-bottom: 1px solid #62d1ba;
+
+  color: @main-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: #46c1ae;
+    border-bottom-color: #46c1ae;
+  }
+
+  &:active {
+    color: fade(#46c1ae, 30%);
+    border-bottom-color: fade(#46c1ae, 10%);
+  }
+}

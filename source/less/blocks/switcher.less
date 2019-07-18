@@ -1,0 +1,29 @@
+.switcher {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.switcher__label {
+  border-color: fade(@main-color, 10%);
+
+  &:hover,
+  &:focus {
+    background-color: #ffffff;
+    border-color: fade(@main-color, 30%);
+    color: @main-color;
+  }
+
+  &:active {
+    background-color: @color-white;
+    border-color: #62d1ba;
+    color: @main-color;
+  }
+}
+
+.switcher__input:checked ~ .switcher__label {
+  background-color: @color-white;
+  border-color: #62d1ba;
+  color: @main-color;
+}

@@ -2,9 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic"
-          rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Каталог</title>
   </head>
   <body>
@@ -12,7 +10,7 @@
     <header class="page-header">
       <nav class="navigation">
         <a class="navigation-logo" href="index.html">
-          <img src="#" alt="Логотип интернет-магазина 'Мишка'">
+          <img src="#" alt="Логотип интернет-магазина Мишка">
         </a>
         <button class="navigation__btn" type="button">Открыть навигацию пользователя</button>
         <div class="navigation__wrapper user-navigation">
@@ -30,7 +28,7 @@
     </header>
 
     <main>
-      <h1>Каталог товаров</h1>
+      <h1 class="content-header">Каталог товаров</h1>
       <section class="catalog-cards">
         <h2 class="visually-hidden">Каталог товаров</h2>
         <ul class="catalog-cards__list">
@@ -113,19 +111,24 @@
     <div class="modal-wrapper">
       <section class="modal modal-basket">
         <h2 class="modal-basket__header">Добавить в корзину</h2>
-        <p class="modal-basket__choose-size">Выберите размер:</p>
-        <ul class="modal-basket__list-size">
-          <li class="modal-basket__item-size">
-            <button class="modal-basket__btn-size btn">s</button>
-          </li>
-          <li class="modal-basket__item-size">
-            <button class="modal-basket__btn-size btn">m</button>
-          </li>
-          <li class="modal-basket__item-size">
-            <button class="modal-basket__btn-size btn">l</button>
-          </li>
-        </ul>
-        <a class="modal-basket__btn btn" href="#">Добавить</a>
+        <form action="https://echo.htmlacademy.ru" method="get" class="basket-form">
+          <p class="basket-form__text">Выберите размер:</p>
+          <ul class="switcher">
+            <li class="switcher__item">
+              <input class="switcher__input" type="radio" name="size" id="size-small" value="small" checked>
+              <label class="switcher__label btn" for="size-small">s</label>
+            </li>
+            <li class="switcher__item">
+              <input class="switcher__input" type="radio" name="size" id="size-middle" value="middle">
+              <label class="switcher__label btn" for="size-middle">m</label>
+            </li>
+            <li class="switcher__item">
+              <input class="switcher__input" type="radio" name="size" id="size-large" value="large">
+              <label class="switcher__label btn" for="size-large">l</label>
+            </li>
+          </ul>
+          <button class="basket-form__btn btn" type="submit">Добавить</button>
+        </form>
       </section>
     </div>
 

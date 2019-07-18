@@ -1,8 +1,10 @@
+@import "normalize";
 @import "variables";
 @import "mixins";
+@import "global";
 @import "blocks/commons/btn";
 @import "blocks/commons/feedback-header";
-@import "blocks/commons/visually-hidden";
+@import "blocks/visually-hidden";
 @import "blocks/page-header";
 @import "blocks/user-navigation";
 @import "blocks/search-form";
@@ -19,16 +21,9 @@
 @import "blocks/switcher";
 @import "blocks/content-header";
 @import "blocks/catalog-cards";
+@import "blocks/catalog-card";
 @import "blocks/manufacturing-process";
 @import "blocks/order-content-header";
 @import "blocks/feedback";
 @import "blocks/feedback-form";
 @import "blocks/contacts-form";
-
-body {
-  background-color: @color-white;
-  color: @main-color;
-  font-family: "Open Sans", "Verdana", sans-serif;
-  font-size: 15px;
-  line-height: 30px;
-}

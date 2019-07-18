@@ -1,0 +1,27 @@
+.btn {
+  display: block;
+  position: relative;
+
+  border: 2px solid @main-color;
+  box-sizing: border-box;
+  height: 52px;
+
+  background-color: transparent;
+  color: @main-color;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: @main-color;
+    color: #ffffff;
+  }
+
+  &:active {
+    background-color: @main-color;
+    color: fade(#ffffff, 30%);
+  }
+}

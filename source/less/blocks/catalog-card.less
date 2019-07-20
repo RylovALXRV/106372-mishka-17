@@ -1,3 +1,10 @@
+.catalog-card {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 30px;
+}
+
 .catalog-card__header {
   color: @color-black;
   font-size: 17px;
@@ -13,8 +20,41 @@
   font-size: 13px;
 }
 
+.catalog-card__footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
 .catalog-card__price {
+  margin: 0;
+
   color: @color-black;
   font-weight: 700;
   line-height: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-card {
+    flex-direction: row;
+
+    margin-bottom: 54px;
+  }
+
+  .catalog-card__header {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-card {
+    flex-direction: column;
+
+    margin-bottom: 57px;
+    margin-right: 51px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
 }

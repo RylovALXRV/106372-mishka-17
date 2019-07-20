@@ -1,4 +1,11 @@
 .contacts {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+  padding: 0 30px;
+  width: 260px;
+
   font-size: 15px;
   line-height: 30px;
 }
@@ -7,7 +14,15 @@
   .font-main-header(18px);
 }
 
+.contacts__wrapper {
+  display: flex;
+}
+
 .contacts__item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+
   font-style: normal;
 }
 
@@ -26,5 +41,11 @@
   &:active {
     color: fade(#46c1ae, 30%);
     border-bottom-color: fade(#46c1ae, 10%);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    width: 668px;
   }
 }

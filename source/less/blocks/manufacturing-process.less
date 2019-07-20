@@ -1,3 +1,12 @@
+.manufacturing-process {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+  padding: 70px 30px 0;
+  width: 260px;
+}
+
 .manufacturing-process__header {
   position: relative;
 
@@ -10,4 +19,15 @@
 .manufacturing-process__text {
   font-size: 13px;
   line-height: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .manufacturing-process {
+    padding: 0 50px;
+    width: 668px;
+  }
+
+  .manufacturing-process__wrapper {
+    order: -1;
+  }
 }

@@ -16,6 +16,8 @@
         <div class="navigation__wrapper user-navigation">
           <a class="user-navigation__link" href="catalog.html">Каталог товаров</a>
           <a class="user-navigation__link" href="order.html">Вязание на&nbsp;заказ</a>
+        </div>
+        <div class="navigation__wrapper user-navigation">
           <form action="https://echo.htmlacademy.ru" method="get" class="search-form">
             <label class="visually-hidden" for="search">Поиск по сайту</label>
             <input class="search-form__input" type="search" name="search-field" id="search"
@@ -24,6 +26,11 @@
           </form>
           <a class="user-navigation__link user-navigation__link--basket" href="#">Корзина: пока пуста</a>
         </div>
+        <div class="navigation__wrapper user-navigation">
+          <a class="user-navigation__link" href="#">Новые поступления</a>
+          <a class="user-navigation__link" href="#">Распродажа</a>
+        </div>
+        <p class="navigation__text">Бесплатная доставка по России</p>
       </nav>
     </header>
 
@@ -40,7 +47,7 @@
         </ul>
       </section>
       <section class="popular-item">
-        <h2 class="popular-item__header">Вязаные козинки
+        <h2 class="popular-item__header">Вязаные корзинки
           <span class="popular-item__text">товар недели</span>
         </h2>
         <p class="popular-item__description">Экологически чистая пряжа, ручная работа. Доступны в&nbsp;шести расцветках,
@@ -93,28 +100,35 @@
         </div>
         <a class="reviews__btn btn" href="#">Написать</a>
       </section>
-      <section class="contacts">
-        <h2 class="contacts__header">Контакты</h2>
-        <address class="contacts__item contacts__item--email">
-          <p class="contacts__header-item">e-mail:</p>
-          <a class="contacts__email-link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-        </address>
-        <address class="contacts__item contacts__item--address">
-          <p class="contacts__header-item">адрес:</p>
-          <p class="contacts__address">г. Санкт-Петербург,
-            ул. Большая Конюшенная,
-            д. 19/8, офис 101</p>
-        </address>
-      </section>
-      <div class="map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5948798555503!2d30.321298598531147!3d59.93886427625822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1562758155847!5m2!1sru!2sru"
-          width="800" height="457" allowfullscreen></iframe>
-        <a class="map__btn btn" href="#">Напишите нам</a>
+      <div class="contacts-wrapper">
+        <section class="contacts">
+          <h2 class="contacts__header">Контакты</h2>
+          <div class="contacts__wrapper">
+            <address class="contacts__item contacts__item--email">
+              <p class="contacts__header-item">e-mail:</p>
+              <a class="contacts__email-link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+            </address>
+            <address class="contacts__item contacts__item--address">
+              <p class="contacts__header-item">адрес:</p>
+              <p class="contacts__address">г. Санкт-Петербург,
+                ул. Большая Конюшенная,
+                д. 19/8, офис 101</p>
+            </address>
+          </div>
+        </section>
+        <div class="map">
+          <iframe class="map__iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5948798555503!2d30.321298598531147!3d59.93886427625822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1562758155847!5m2!1sru!2sru"
+            allowfullscreen></iframe>
+          <a class="map__btn btn" href="#">Напишите нам</a>
+        </div>
       </div>
     </main>
 
     <footer class="page-footer">
+      <a class="footer-logo">
+        <img class="footer-logo__img" src="#" alt="Логотип интернет-магазина Мишка">
+      </a>
       <section class="page-footer__social social">
         <h2 class="visually-hidden">Группы в соц.сетях</h2>
         <ul class="social__list">
@@ -144,15 +158,15 @@
           <p class="basket-form__text">Выберите размер:</p>
           <ul class="switcher">
             <li class="switcher__item">
-              <input class="switcher__input" type="radio" name="size" id="size-small" value="small" checked>
+              <input class="switcher__input visually-hidden" type="radio" name="size" id="size-small" value="small" checked>
               <label class="switcher__label btn" for="size-small">s</label>
             </li>
             <li class="switcher__item">
-              <input class="switcher__input" type="radio" name="size" id="size-middle" value="middle">
+              <input class="switcher__input visually-hidden" type="radio" name="size" id="size-middle" value="middle">
               <label class="switcher__label btn" for="size-middle">m</label>
             </li>
             <li class="switcher__item">
-              <input class="switcher__input" type="radio" name="size" id="size-large" value="large">
+              <input class="switcher__input visually-hidden" type="radio" name="size" id="size-large" value="large">
               <label class="switcher__label btn" for="size-large">l</label>
             </li>
           </ul>

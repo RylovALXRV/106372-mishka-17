@@ -1,0 +1,24 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+  padding: 0 30px;
+  width: 260px;
+
+  background-color: #f1f1f1;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    flex-direction: row;
+
+    width: 668px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    width: 1050px;
+  }
+}

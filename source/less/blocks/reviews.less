@@ -1,3 +1,47 @@
+.reviews {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  margin: 0 auto;
+  padding: 0 30px;
+  width: 260px;
+}
+
 .reviews__header {
   .font-main-header();
+}
+
+.reviews__item {
+  margin: 0;
+  padding: 0;
+}
+
+.reviews__controls {
+  display: flex;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews {
+    padding: 0 50px;
+    width: 668px;
+  }
+
+  .reviews__controls {
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+  }
+
+  .reviews__btn {
+    position: absolute;
+    right: 50px;
+    top: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews {
+    width: 1050px;
+  }
 }

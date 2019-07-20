@@ -1,3 +1,9 @@
+.popular-item {
+  margin: 0 auto;
+  padding: 0 30px;
+  width: 260px;
+}
+
 .popular-item__header {
   .font-main-header();
 }
@@ -18,4 +24,31 @@
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .popular-item {
+    padding: 0 50px;
+    width: 668px;
+  }
+
+  .popular-item__header {
+    display: flex;
+  }
+
+  .popular-item__text {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .popular-item {
+    width: 1050px;
+  }
+
+  .popular-item__text {
+    order: -1;
+
+    margin-left: 0;
+  }
 }

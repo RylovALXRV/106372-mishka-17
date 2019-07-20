@@ -16,14 +16,21 @@
         <div class="navigation__wrapper user-navigation">
           <a class="user-navigation__link">Каталог товаров</a>
           <a class="user-navigation__link" href="order.html">Вязание на&nbsp;заказ</a>
+        </div>
+        <div class="navigation__wrapper user-navigation">
           <form action="https://echo.htmlacademy.ru" method="get" class="search-form">
             <label class="visually-hidden" for="search">Поиск по сайту</label>
             <input class="search-form__input" type="search" name="search-field" id="search"
                   placeholder="Поиск по сайту" required>
-            <button class="search-form__btn" type="button">Найти</button>
+            <button class="search-form__btn" type="submit">Найти</button>
           </form>
           <a class="user-navigation__link user-navigation__link--basket" href="#">Корзина: пока пуста</a>
         </div>
+        <div class="navigation__wrapper user-navigation">
+          <a class="user-navigation__link" href="#">Новые поступления</a>
+          <a class="user-navigation__link" href="#">Распродажа</a>
+        </div>
+        <p class="navigation__text">Бесплатная доставка по России</p>
       </nav>
     </header>
 
@@ -36,40 +43,46 @@
             <a class="catalog-card__img-link" href="#">
               <img class="catalog-card__img" src="#" alt="зайчик-попрыгайчик">
             </a>
-            <h2 class="catalog-card__header">
-              <a class="catalog-card__header-link" href="#">Зайчик-попрыгайчик</a>
-            </h2>
-            <p class="catalog-card__features">Рост 30 см, вес 200 г</p>
-            <footer class="catalog-card__footer">
-              <p class="catalog-card__price">1&nbsp;200&nbsp;руб.</p>
-              <a class="catalog-card__basket" href="#">Добавить в&nbsp;корзину</a>
-            </footer>
+            <div class="catalog-card__wrapper">
+              <h2 class="catalog-card__header">
+                <a class="catalog-card__header-link" href="#">Зайчик-попрыгайчик</a>
+              </h2>
+              <p class="catalog-card__features">Рост 30 см, вес 200 г</p>
+              <footer class="catalog-card__footer">
+                <p class="catalog-card__price">1&nbsp;200&nbsp;руб.</p>
+                <a class="catalog-card__basket" href="#">Добавить в&nbsp;корзину</a>
+              </footer>
+            </div>
           </li>
           <li class="catalog-cards__item catalog-card">
             <a class="catalog-card__img-link" href="#">
               <img class="catalog-card__img" src="#" alt="Корзинка для белья">
             </a>
-            <h2 class="catalog-card__header">
-              <a class="catalog-card__header-link" href="#">Корзинка для&nbsp;белья</a>
-            </h2>
-            <p class="catalog-card__features">Диаметр 15 см, высота 10 см</p>
-            <footer class="catalog-card__footer">
-              <p class="catalog-card__price">690&nbsp;руб.</p>
-              <a class="catalog-card__basket" href="#">Добавить в&nbsp;корзину</a>
-            </footer>
+            <div class="catalog-card__wrapper">
+              <h2 class="catalog-card__header">
+                <a class="catalog-card__header-link" href="#">Корзинка для&nbsp;белья</a>
+              </h2>
+              <p class="catalog-card__features">Диаметр 15 см, высота 10 см</p>
+              <footer class="catalog-card__footer">
+                <p class="catalog-card__price">690&nbsp;руб.</p>
+                <a class="catalog-card__basket" href="#">Добавить в&nbsp;корзину</a>
+              </footer>
+            </div>
           </li>
           <li class="catalog-cards__item catalog-card">
             <a class="catalog-card__img-link" href="#">
               <img class="catalog-card__img" src="#" alt="Большая корзинка для игрушек">
             </a>
-            <h2 class="catalog-card__header">
-              <a class="catalog-card__header-link" href="#">Большая корзинка для&nbsp;игрушек</a>
-            </h2>
-            <p class="catalog-card__features">Диаметр 30 см, высота 30 см</p>
-            <footer class="catalog-card__footer">
-              <p class="catalog-card__price">1&nbsp;500&nbsp;руб.</p>
-              <a class="catalog-card__basket" href="#">Добавить в&nbsp;корзину</a>
-            </footer>
+            <div class="catalog-card__wrapper">
+              <h2 class="catalog-card__header">
+                <a class="catalog-card__header-link" href="#">Большая корзинка для&nbsp;игрушек</a>
+              </h2>
+              <p class="catalog-card__features">Диаметр 30 см, высота 30 см</p>
+              <footer class="catalog-card__footer">
+                <p class="catalog-card__price">1&nbsp;500&nbsp;руб.</p>
+                <a class="catalog-card__basket" href="#">Добавить в&nbsp;корзину</a>
+              </footer>
+            </div>
           </li>
         </ul>
       </section>
@@ -86,6 +99,9 @@
     </main>
 
     <footer class="page-footer">
+      <a class="footer-logo" href="#">
+        <img class="footer-logo__img" src="#" alt="Логотип интернет-магазина Мишка">
+      </a>
       <section class="page-footer__social social">
         <h2 class="visually-hidden">Группы в соц.сетях</h2>
         <ul class="social__list">
@@ -115,15 +131,15 @@
           <p class="basket-form__text">Выберите размер:</p>
           <ul class="switcher">
             <li class="switcher__item">
-              <input class="switcher__input" type="radio" name="size" id="size-small" value="small" checked>
+              <input class="switcher__input visually-hidden" type="radio" name="size" id="size-small" value="small" checked>
               <label class="switcher__label btn" for="size-small">s</label>
             </li>
             <li class="switcher__item">
-              <input class="switcher__input" type="radio" name="size" id="size-middle" value="middle">
+              <input class="switcher__input visually-hidden" type="radio" name="size" id="size-middle" value="middle">
               <label class="switcher__label btn" for="size-middle">m</label>
             </li>
             <li class="switcher__item">
-              <input class="switcher__input" type="radio" name="size" id="size-large" value="large">
+              <input class="switcher__input visually-hidden" type="radio" name="size" id="size-large" value="large">
               <label class="switcher__label btn" for="size-large">l</label>
             </li>
           </ul>

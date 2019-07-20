@@ -1,3 +1,9 @@
+.handwork {
+  margin: 0 auto;
+  padding: 70px 30px 0;
+  width: 260px;
+}
+
 .handwork__header {
   margin: 0;
 
@@ -5,6 +11,9 @@
 }
 
 .handwork__list {
+  display: flex;
+  flex-direction: column;
+
   margin: 0;
   padding: 0;
 
@@ -30,5 +39,34 @@
 
   &--toys {
     background-color: #56c3b2;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .handwork {
+    padding: 150px 50px 0;
+    width: 668px;
+  }
+
+  .handwork__header {
+    .font-main-header(43px, 50px);
+  }
+
+  .handwork__list {
+    flex-direction: row;
+  }
+
+  .handwork__item {
+    width: 50%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .handwork {
+    width: 1050px;
+  }
+
+  .handwork__header {
+    .font-main-header(53px, 57px);
   }
 }

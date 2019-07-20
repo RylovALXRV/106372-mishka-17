@@ -1,4 +1,11 @@
 .info {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+  padding: 0 30px;
+  width: 260px;
+
   color: @color-black;
   font-size: 17px;
   font-weight: 700;
@@ -15,4 +22,27 @@
   padding: 0;
 
   list-style-type: none;
+}
+
+@media (min-width: @tablet-width) {
+  .info {
+    padding: 0 50px;
+    width: 668px;
+  }
+
+  .info__list {
+    display: block;
+
+    column-count: 2;
+  }
+
+  .info__item {
+    width: 50%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .info {
+    width: 1050px;
+  }
 }

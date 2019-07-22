@@ -1,13 +1,21 @@
 .navigation-logo {
   position: relative;
   display: block;
+
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .navigation__inner {
+    margin-right: auto;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .navigation-logo {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
+    //position: absolute;
+    //left: 50%;
+    //top: 0;
+    //transform: translateX(-50%);
   }
 }

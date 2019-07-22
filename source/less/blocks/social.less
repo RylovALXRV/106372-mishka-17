@@ -1,10 +1,55 @@
+.social {
+  border-bottom: 1px solid #000000;
+  padding: 25px 0;
+}
+
 .social__list {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
+  justify-content: center;
 
   margin: 0;
   padding: 0;
 
   list-style-type: none;
+}
+
+.social__item {
+  margin: 0 20px 5px;
+}
+
+.social__btn {
+  display: block;
+
+  &--inst,
+  &--twitter {
+    margin-top: 5px;
+  }
+}
+
+.social__svg {
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    border-bottom: 0;
+    padding: 0;
+    //width: 310px;
+  }
+
+  .social__list {
+    //justify-content: flex-end;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .social {
+    width: auto;
+  }
+
+  .social__list {
+    justify-content: center;
+  }
 }

@@ -8,6 +8,90 @@
   width: 260px;
 }
 
+.navigation__link {
+  text-align: center;
+
+  border-bottom: 1px solid #ececec;
+  padding: 27px 0;
+
+  color: @color-black;
+  text-decoration: none;
+
+  &--basket {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &:hover,
+  &:focus {
+    color: fade(@color-black, 60%);
+  }
+
+  &:active {
+    color: fade(@color-black, 30%);
+  }
+}
+
+.navigation__inner {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+
+  border-bottom: 1px solid #ececec;
+  padding: 22px 0;
+}
+
+.navigation__menu-list {
+  display: flex;
+  flex-direction: column;
+
+  &--offer {
+    display: none;
+  }
+
+  &--user {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.navigation__btn {
+  position: absolute;
+  right: 0;
+
+  border: 0;
+  height: 27px;
+  width: 27px;
+
+  background-color: transparent;
+  font-size: 0;
+  transform: rotate(45deg);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 12px;
+
+    height: 2px;
+    width: 27px;
+
+    background-color: #000000;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 0;
+
+    height: 27px;
+    width: 2px;
+
+    background-color: #000000;
+  }
+}
+
 .navigation__text {
   display: none;
 
@@ -23,12 +107,45 @@
   .navigation {
     flex-direction: row;
 
+    border-bottom: 1px solid #ececec;
     padding: 0 50px;
     width: 668px;
   }
 
+  .navigation__inner {
+    border: 0;
+  }
+
+  .navigation__link {
+    border: 0;
+    //padding: 0;
+  }
+
   .navigation__btn {
     display: none;
+  }
+
+  .navigation__menu-list {
+    flex-direction: row;
+
+    &--nav {
+      position: absolute;
+      top: 100%;
+      margin-top: 20px;
+    }
+
+    &--user {
+      flex-direction: row;
+    }
+  }
+
+  .navigation__text {
+    display: block;
+    position: absolute;
+    right: 50px;
+    top: 100%;
+
+    margin-top: 20px;
   }
 }
 
@@ -39,10 +156,24 @@
     width: 1050px;
   }
 
-  .navigation__text {
-    display: block;
-    position: absolute;
-    right: 50px;
-    bottom: -40px;
+  .navigation__menu-list {
+    &--nav {
+      order: -1;
+      position: relative;
+
+      margin-right: auto;
+      margin-top: 0;
+    }
+
+    &--offer {
+      position: absolute;
+      top: 100%;
+
+      margin-top: 20px;
+    }
+
+    &--user {
+      //margin-left: auto;
+    }
   }
 }

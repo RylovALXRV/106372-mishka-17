@@ -1,11 +1,36 @@
 .copyright {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+
+  padding: 22px 0 22px;
 }
 
 .copyright__text {
+  margin: 0 30px 0 0;
+
   color: @color-black;
   font-size: 19px;
   font-weight: 700;
   line-height: 18px;
+}
+
+.copyright__logo-link {
+  display: block;
+
+  height: 34px;
+  width: 27px;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    margin-left: auto;
+    padding: 0 0 0 10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright {
+    padding-left: 30px;
+  }
 }

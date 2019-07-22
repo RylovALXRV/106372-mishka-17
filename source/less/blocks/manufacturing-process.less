@@ -2,23 +2,107 @@
   display: flex;
   flex-direction: column;
 
-  margin: 0 auto;
-  padding: 70px 30px 0;
+  margin: 0 auto 58px;
+  padding: 0 30px;
   width: 260px;
 }
 
 .manufacturing-process__header {
   position: relative;
 
+  border: 1px solid #ececec;
+  border-bottom: 0;
+  margin: 0;
+  padding: 24px 42px 24px 90px;
+
   color: @color-black;
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 33px;
+    top: 30px;
+
+    height: 32px;
+    width: 32px;
+
+    background: url("../../img/icon-video.svg") no-repeat;
+  }
+}
+
+.manufacturing-process__wrapper {
+  position: relative;
+}
+
+.manufacturing-process__video {
+  display: block;
+
+  height: auto;
+  width: 100%;
+}
+
+.manufacturing-process__play {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  margin: auto;
+
+  border: 0;
+  height: 77px;
+  padding: 0;
+  width: 101px;
+
+  background-color: transparent;
+  font-size: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    height: 100%;
+    width: 100%;
+
+    background: url("../../img/icon-play.svg") no-repeat;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+}
+
+.manufacturing-process__wrapper-bottom {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #ececec;
+  border-top: 0;
+  padding: 30px 0 32px;
 }
 
 .manufacturing-process__text {
+  margin: 0 0 30px;
+  padding: 0 35px 0 33px;
+
   font-size: 13px;
   line-height: 24px;
+}
+
+.manufacturing-process__btn {
+  margin: 0 33px;
 }
 
 @media (min-width: @tablet-width) {
@@ -27,7 +111,39 @@
     width: 668px;
   }
 
+  .manufacturing-process__header {
+    padding-left: 106px;
+
+    font-size: 20px;
+
+    &::before {
+      left: 41px;
+      top: 18px;
+    }
+  }
+
   .manufacturing-process__wrapper {
     order: -1;
+  }
+
+  .manufacturing-process__text {
+    padding: 0 41px 0 44px;
+
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .manufacturing-process__wrapper-bottom {
+    padding: 0 0 45px;
+  }
+
+  .manufacturing-process__btn {
+    margin: 0 41px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .manufacturing-process {
+    //flex-direction: row;
   }
 }

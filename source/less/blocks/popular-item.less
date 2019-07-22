@@ -1,14 +1,35 @@
 .popular-item {
-  margin: 0 auto;
-  padding: 0 30px;
+  position: relative;
+
+  margin: 0 auto 35px;
+  padding: 30px 30px 42px;
   width: 260px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    height: 6px;
+    width: 100%;
+
+    background-image: url("../../img/bg-zigzag-line.svg");
+    background-size: contain;
+  }
 }
 
 .popular-item__header {
+  position: relative;
+
+  margin: 0 0 33px;
+
   .font-main-header();
 }
 
 .popular-item__text {
+  display: block;
+
   color: @color-light-green;
   font-size: 17px;
   font-weight: 700;
@@ -17,10 +38,14 @@
 }
 
 .popular-item__description {
+  margin: 0 0 25px;
+
   line-height: 24px;
 }
 
 .popular-item__price {
+  text-align: center;
+
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
@@ -28,27 +53,84 @@
 
 @media (min-width: @tablet-width) {
   .popular-item {
-    padding: 0 50px;
+    margin-bottom: 55px;
+    padding: 30px 50px 68px;
     width: 668px;
+
+    &::after {
+      height: 15px;
+
+      background-size: contain;
+    }
+  }
+
+  .popular-item__wrapper-content {
+    //position: relative;
+
+    width: 290px;
   }
 
   .popular-item__header {
     display: flex;
+    z-index: 1;
+
+    width: 668px;
+
+    .font-main-header(43px, 50px);
   }
 
   .popular-item__text {
+    text-align: center;
+
     margin-left: auto;
+    width: 130px;
+
+    line-height: 17px;
+  }
+
+  .popular-item__img {
+    position: absolute;
+    right: 50px;
+    top: 105px;
+
+    margin-left: 44px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .popular-item {
+    padding-top: 50px;
     width: 1050px;
+
+    &::after {
+      height: 23px;
+    }
+  }
+
+  .popular-item__wrapper-content {
+    width: 467px;
+  }
+
+  .popular-item__wrapper {
+    padding-left: 175px;
+  }
+
+  .popular-item__header {
+    width: 1050px;
+
+    .font-main-header(53px, 57px);
   }
 
   .popular-item__text {
     order: -1;
 
+    box-sizing: border-box;
     margin-left: 0;
+    padding: 0 25px;
+    width: 175px;
+  }
+
+  .popular-item__img {
+    top: 0;
   }
 }

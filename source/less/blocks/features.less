@@ -1,4 +1,6 @@
 .features {
+  margin-bottom: 28px;
+
   line-height: 20px;
 }
 
@@ -6,7 +8,17 @@
   display: flex;
 }
 
+.features td {
+  border-bottom: 1px solid #ececec;
+}
+
 .features__row {
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .features {
+    margin-bottom: 57px;
+  }
 }

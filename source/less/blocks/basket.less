@@ -1,4 +1,6 @@
 .basket {
+  justify-content: center;
+
   &:hover .basket__svg,
   &:focus .basket__svg {
     fill: @color-light-green;
@@ -11,6 +13,7 @@
 
 .basket__text {
   margin: 0;
+  padding-left: 24px;
 }
 
 .basket__svg {
@@ -19,4 +22,12 @@
   margin-top: 2px;
 
   fill: fade(#221f1f, 20%);
+}
+
+@media (min-width: @tablet-width) {
+  .navigation__link {
+    &--basket {
+      width: 265px;
+    }
+  }
 }

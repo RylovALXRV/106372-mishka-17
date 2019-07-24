@@ -1,6 +1,9 @@
 .social {
-  border-bottom: 1px solid #000000;
-  padding: 25px 0;
+  border-bottom: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 25px 30px;
+  width: 260px;
 }
 
 .social__list {
@@ -26,6 +29,15 @@
   &--twitter {
     margin-top: 5px;
   }
+
+  &:hover .social__svg,
+  &:focus .social__svg {
+    fill: #46c1ae;
+  }
+
+  &:active .social__svg {
+    fill: fade(#46c1ae, 30%);
+  }
 }
 
 .social__svg {
@@ -37,10 +49,6 @@
     border-bottom: 0;
     padding: 0;
     //width: 310px;
-  }
-
-  .social__list {
-    //justify-content: flex-end;
   }
 }
 

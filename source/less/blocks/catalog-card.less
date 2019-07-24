@@ -4,6 +4,7 @@
 
   box-sizing: border-box;
   margin-bottom: 30px;
+  width: 260px;
 
   &:hover .catalog-card__wrapper,
   &:focus .catalog-card__wrapper {
@@ -95,6 +96,7 @@
     flex-direction: row;
 
     margin-bottom: 54px;
+    width: auto;
   }
 
   .catalog-card__header {
@@ -102,7 +104,7 @@
   }
 
   .catalog-card__wrapper {
-    width: 100%;
+    flex-grow: 1;
   }
 
   .catalog-card__footer {
@@ -116,13 +118,14 @@
 
     margin-bottom: 57px;
     margin-right: 51px;
+    width: 315px;
 
     &:nth-child(3n) {
       margin-right: 0;
     }
   }
 
-  .catalog-card__wrapper {
-    width: 260px;
+  .catalog-card__img {
+    width: 100%;
   }
 }

@@ -1,0 +1,36 @@
+.user-list__link {
+  &:hover .user-list__svg,
+  &:focus .user-list__svg {
+    fill: @color-light-green;
+  }
+
+  &:active .user-list__svg {
+    fill: fade(@color-light-green, 30%);
+  }
+}
+
+.user-list__text-basket {
+  margin: 0;
+}
+
+.user-list__svg {
+  position: absolute;
+  left: 0;
+  top: 26px;
+
+  fill: fade(#221f1f, 20%);
+}
+
+@media (min-width: @tablet-width) {
+  .user-list__item {
+    border-left: 1px solid #dfdfdf;
+
+    &--basket a {
+      padding-left: 78px;
+    }
+  }
+
+  .user-list__svg {
+    left: 31px;
+  }
+}

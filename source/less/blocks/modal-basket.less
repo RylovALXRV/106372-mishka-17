@@ -1,4 +1,31 @@
+.modal-basket {
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px 0 46px;
+  width: 100%;
+}
+
 .modal-basket__header {
+  text-align: center;
+
+  margin: 0 auto 20px;
+  width: 260px;
+
   .font-main-header();
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .modal-basket {
+    align-items: center;
+
+    width: 566px;
+  }
+
+  .modal-basket__header {
+    width: auto;
+
+    .font-main-header(30px, 57px);
+  }
 }

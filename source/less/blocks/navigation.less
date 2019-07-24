@@ -2,13 +2,55 @@
   display: flex;
   flex-direction: column;
   position: relative;
+}
 
+.navigation__menu-list {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  &--offer {
+    display: none;
+  }
+
+  &--user {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.navigation__menu-list li {
+  border-bottom: 1px solid #ececec;
+}
+
+.navigation__menu-list a {
+  display: block;
+  position: relative;
+
+  box-sizing: border-box;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 26px 0 24px 46px;
   width: 260px;
+
+  color: @color-black;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: fade(@color-black, 60%);
+  }
+
+  &:active {
+    color: fade(@color-black, 30%);
+  }
 }
 
 .navigation__link {
+  position: relative;
   text-align: center;
 
   border-bottom: 1px solid #ececec;
@@ -21,15 +63,6 @@
     display: flex;
     align-items: flex-start;
   }
-
-  &:hover,
-  &:focus {
-    color: fade(@color-black, 60%);
-  }
-
-  &:active {
-    color: fade(@color-black, 30%);
-  }
 }
 
 .navigation__inner {
@@ -41,23 +74,10 @@
   padding: 22px 0;
 }
 
-.navigation__menu-list {
-  display: flex;
-  flex-direction: column;
-
-  &--offer {
-    display: none;
-  }
-
-  &--user {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
 .navigation__btn {
   position: absolute;
-  right: 0;
+  right: 30px;
+  top: 28px;
 
   border: 0;
   height: 27px;
@@ -107,18 +127,23 @@
   .navigation {
     flex-direction: row;
 
-    border-bottom: 1px solid #ececec;
+    margin: 0 auto;
     padding: 0 50px;
     width: 668px;
   }
 
+  .navigation li {
+    border-bottom: 0;
+  }
+
   .navigation__inner {
     border: 0;
+    margin-right: auto;
+    padding: 22px 0 0 0;
   }
 
   .navigation__link {
     border: 0;
-    //padding: 0;
   }
 
   .navigation__btn {
@@ -132,7 +157,15 @@
       position: absolute;
       top: 100%;
       margin-top: 20px;
+
+      font-size: 15px;
     }
+
+    //&--nav a {
+    //  margin-right: 37px;
+    //  padding: 0;
+    //  width: auto;
+    //}
 
     &--user {
       flex-direction: row;
@@ -166,14 +199,15 @@
     }
 
     &--offer {
+      display: block;
       position: absolute;
       top: 100%;
 
       margin-top: 20px;
     }
+  }
 
-    &--user {
-      //margin-left: auto;
-    }
+  .navigation__menu-list a {
+    //padding: 0;
   }
 }

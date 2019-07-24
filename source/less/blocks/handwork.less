@@ -1,18 +1,15 @@
 .handwork {
-  margin: 0 auto;
-  padding: 70px 0 0;
-  width: 320px;
+  padding-top: 87px;
 
-  background-image: url("../../img/hero-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: top;
+  background: #fafafa url("../../img/hero-mobile@1x.jpg") no-repeat top;
 }
 
 .handwork__header {
   text-align: center;
 
-  margin: 0 0 120px;
+  margin: 0 auto 120px;
   padding: 0 30px;
+  width: 260px;
 
   .font-main-header(27px);
 }
@@ -27,24 +24,43 @@
   list-style-type: none;
 }
 
+.handwork__item {
+  background-color: @color-light-green;
+
+  &--toys {
+    background-color: #56c3b2;
+  }
+}
+
 .handwork__link {
   display: block;
   position: relative;
 
   padding: 30px;
+  margin: 0 auto;
+  width: 260px;
 
-  background-color: @color-light-green;
   color: @color-white;
   font-size: 19px;
   font-weight: 700;
   line-height: 24px;
   text-decoration: none;
 
+  &:hover::after,
+  &:focus::after {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   &::after {
+    content: "";
     position: absolute;
     top: 25px;
 
-    content: "";
+    opacity: 0.5;
   }
 
   &--interior {
@@ -59,8 +75,6 @@
   }
 
   &--toys {
-    background-color: #56c3b2;
-
     &::after {
       right: 27px;
 
@@ -80,14 +94,18 @@
 
 @media (min-width: @tablet-width) {
   .handwork {
-    padding: 150px 50px 0;
-    width: 668px;
-
     background-image: url("../../img/hero-tablet@1x.jpg");
+  }
+
+  .handwork__wrapper {
+    margin: 0 auto;
+    padding: 68px 50px 0;
+    width: 668px;
   }
 
   .handwork__header {
     margin-bottom: 375px;
+    width: auto;
 
     .font-main-header(43px, 50px);
   }
@@ -104,9 +122,12 @@
 @media (min-width: @desktop-width) {
   .handwork {
     margin-bottom: 71px;
-    width: 1050px;
 
     background-image: url("../../img/hero-desktop@1x.jpg");
+  }
+
+  .handwork__wrapper {
+    width: 1050px;
   }
 
   .handwork__header {

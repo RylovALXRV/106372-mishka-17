@@ -1,5 +1,18 @@
 .footer-logo {
   display: none;
+
+  &:hover .footer-logo__svg,
+  &:focus .footer-logo__svg {
+    fill: #46c1ae;
+  }
+
+  &:active .footer-logo__svg {
+    fill: fade(#46c1ae, 30%);
+  }
+}
+
+.footer-logo__svg {
+  fill: #231f20;
 }
 
 @media (min-width: @tablet-width) {

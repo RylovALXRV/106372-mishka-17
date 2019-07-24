@@ -1,20 +1,30 @@
 .features {
   margin-bottom: 28px;
+  width: 100%;
 
   line-height: 20px;
 }
 
 .features tbody {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.features td {
-  border-bottom: 1px solid #ececec;
+.features__row td {
+  &:first-of-type {
+    margin-right: 10px;
+    min-width: 75px;
+  }
 }
 
 .features__row {
   display: flex;
-  flex-direction: column;
+
+  padding: 8px 0;
+  width: 100%;
+
+  border-bottom: 1px solid #ececec;
 }
 
 @media (min-width: @tablet-width) {

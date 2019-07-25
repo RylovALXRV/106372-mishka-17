@@ -1,3 +1,38 @@
+.catalog-card {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  width: 260px;
+
+  &:hover .catalog-card__wrapper,
+  &:focus .catalog-card__wrapper {
+    box-shadow: 0 6px 10px 0 fade(@color-black, 10%);
+  }
+
+  &:active .catalog-card__wrapper {
+    box-shadow: 0 3px 5px 0 fade(@color-black, 10%);
+  }
+}
+
+.catalog-card__img-link {
+  display: block;
+}
+
+.catalog-card__img {
+  display: block;
+}
+
+.catalog-card__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #ececec;
+  box-sizing: border-box;
+  padding: 0 30px;
+}
+
 .catalog-card__header {
   color: @color-black;
   font-size: 17px;
@@ -7,14 +42,90 @@
 .catalog-card__header-link {
   color: @color-black;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: fade(@color-black, 60%);
+  }
+
+  &:active {
+    color: fade(@color-black, 30%);
+  }
 }
 
 .catalog-card__features {
   font-size: 13px;
 }
 
+.catalog-card__footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  border-top: 1px solid #ececec;
+  padding: 22px 0 26px;
+}
+
 .catalog-card__price {
+  margin: 0;
+
   color: @color-black;
   font-weight: 700;
   line-height: 24px;
+}
+
+.catalog-card__basket {
+  &:hover .catalog-card__svg,
+  &:focus .catalog-card__svg {
+    fill: @color-light-green;
+  }
+
+  &:active .catalog-card__svg {
+    fill: fade(@color-light-green, 30%);
+  }
+}
+
+.catalog-card__svg {
+  display: block;
+
+  fill: fade(@color-black, 20%);
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-card {
+    flex-direction: row;
+
+    margin-bottom: 54px;
+    width: auto;
+  }
+
+  .catalog-card__header {
+    font-size: 20px;
+  }
+
+  .catalog-card__wrapper {
+    flex-grow: 1;
+  }
+
+  .catalog-card__footer {
+    margin-top: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-card {
+    flex-direction: column;
+
+    margin-bottom: 57px;
+    margin-right: 51px;
+    width: 315px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  .catalog-card__img {
+    width: 100%;
+  }
 }

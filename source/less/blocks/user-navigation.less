@@ -1,3 +1,12 @@
+.user-navigation {
+  display: flex;
+  flex-direction: column;
+
+  &:nth-of-type(3) {
+    display: none;
+  }
+}
+
 .user-navigation__link {
   color: @color-black;
   text-decoration: none;
@@ -9,5 +18,40 @@
 
   &:active {
     color: fade(@color-black, 30%);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .user-navigation {
+    flex-direction: row;
+
+    &:first-of-type {
+      order: 1;
+      position: absolute;
+      left: 50px;
+      bottom: -30px;
+    }
+
+    &:nth-of-type(2) {
+      margin-left: auto;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-navigation {
+    &:first-of-type {
+      order: 0;
+      position: relative;
+      left: 0;
+      top: 0;
+    }
+
+    &:nth-of-type(3) {
+      display: block;
+      position: absolute;
+      left: 50px;
+      bottom: -40px;
+    }
   }
 }

@@ -1,4 +1,11 @@
 .info {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto 25px;
+  padding: 0 30px;
+  width: 260px;
+
   color: @color-black;
   font-size: 17px;
   font-weight: 700;
@@ -6,6 +13,8 @@
 }
 
 .info__header {
+  margin: 0 0 31px;
+
   font-size: 25px;
   line-height: 30px;
 }
@@ -15,4 +24,169 @@
   padding: 0;
 
   list-style-type: none;
+}
+
+.info__item {
+  display: flex;
+  flex-grow: 1;
+  position: relative;
+
+  margin-bottom: 30px;
+  padding-top: 50px;
+
+  &::before {
+    content: "";
+    position: absolute;
+  }
+
+  &--eco {
+    &::before {
+      top: 0;
+
+      height: 37px;
+      width: 32px;
+
+      background: url("../../img/icon-feature-flower.svg") no-repeat;
+    }
+  }
+
+  &--price {
+    &::before {
+      top: 0;
+
+      height: 27px;
+      width: 47px;
+
+      background: url("../../img/icon-feature-money.svg") no-repeat;
+    }
+  }
+
+  &--popular {
+    &::before {
+      top: 0;
+
+      height: 27px;
+      width: 34px;
+
+      background: url("../../img/icon-feature-heart.svg") no-repeat;
+    }
+  }
+
+  &--handwork {
+    &::before {
+      top: 0;
+
+      height: 35px;
+      width: 35px;
+
+      background: url("../../img/icon-feature-ball.svg") no-repeat;
+    }
+  }
+
+  &--home {
+    &::before {
+      top: 0;
+
+      height: 23px;
+      width: 55px;
+
+      background: url("../../img/icon-feature-rocket.svg") no-repeat;
+    }
+  }
+
+  &--package {
+    &::before {
+      top: 0;
+
+      height: 32px;
+      width: 33px;
+
+      background: url("../../img/icon-feature-gift.svg") no-repeat;
+    }
+  }
+}
+
+.info__text {
+  margin: 0;
+  width: 100%;
+
+  &--eco {
+    width: 195px;
+  }
+
+  &--price {
+    width: 205px;
+  }
+
+  &--popular {
+    width: 190px;
+  }
+
+  &--handwork {
+    width: 220px;
+  }
+
+  &--package {
+    width: 210px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .info {
+    padding: 0 50px;
+    width: 668px;
+  }
+
+  .info__header {
+    margin-bottom: 45px;
+
+    .font-main-header(43px, 50px);
+  }
+
+  .info__list {
+    display: block;
+
+    column-count: 2;
+  }
+
+  .info__item {
+    break-inside: avoid;
+
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .info__text {
+    &--eco {
+      width: 220px;
+    }
+
+    &--price {
+      width: 245px;
+    }
+
+    &--popular {
+      width: 220px;
+    }
+
+    &--handwork {
+      width: 260px;
+    }
+
+    &--package {
+      width: 240px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .info {
+    box-sizing: border-box;
+    padding: 0 175px;
+    width: 1050px;
+  }
+
+  .info__header {
+    .font-main-header(53px, 57px);
+  }
 }

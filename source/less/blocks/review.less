@@ -1,4 +1,11 @@
+.review {
+  display: flex;
+  flex-direction: column;
+}
+
 .review__text {
+  margin: 0 0 33px;
+
   font-size: 15px;
   line-height: 30px;
 }
@@ -13,4 +20,31 @@
 
 .review__nickname {
   font-size: 17px;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews__wrapper {
+    margin-bottom: 85px;
+  }
+
+  .review__text {
+    margin-bottom: 60px;
+
+    font-size: 17px;
+  }
+
+  .reviews__controls {
+    bottom: 105px;
+  }
+
+  .reviews__control {
+    border: 0;
+    width: 88px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .review__text {
+    padding-right: 40px;
+  }
 }

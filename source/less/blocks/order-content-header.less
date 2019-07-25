@@ -1,4 +1,27 @@
 .order-content-header {
+  text-align: center;
+
+  margin: 0 0 22px;
+  padding: 71px 0 76px;
+
   .font-main-header(27px);
   background-color: #f1f1f1;
+}
+
+@media (min-width: @tablet-width) {
+  .order-content-header {
+    margin-bottom: 74px;
+    padding: 93px 0 80px;
+
+    .font-main-header(43px, 50px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order-content-header {
+    margin-bottom: 124px;
+    padding-bottom: 101px;
+
+    .font-main-header(53px, 57px);
+  }
 }

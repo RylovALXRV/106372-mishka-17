@@ -30,13 +30,22 @@
 
   border: 1px solid #ececec;
   box-sizing: border-box;
-  padding: 0 30px;
+  padding: 27px 30px 0;
 }
 
 .catalog-card__header {
+  margin: 0 0 5px;
+
   color: @color-black;
   font-size: 17px;
   line-height: 24px;
+}
+
+.catalog-card__features {
+  margin: 0;
+  padding-bottom: 18px;
+
+  font-size: 13px;
 }
 
 .catalog-card__header-link {
@@ -51,10 +60,6 @@
   &:active {
     color: fade(@color-black, 30%);
   }
-}
-
-.catalog-card__features {
-  font-size: 13px;
 }
 
 .catalog-card__footer {

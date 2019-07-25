@@ -33,9 +33,9 @@
 .search-form__btn {
   order: -1;
   position: absolute;
-  left: 0;
+  left: 3px;
 
-  margin-top: 2px;
+  margin-top: 5px;
 
   border: 0;
   padding: 0;
@@ -61,7 +61,8 @@
 @media (min-width: @tablet-width) {
   .search-form {
     border-bottom: 0;
-    width: 80px;
+    padding: 32px 0;
+    width: 82px;
   }
 
   .search-form__wrapper {
@@ -74,5 +75,11 @@
 
   .search-form__btn {
     position: relative;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .search-form__btn {
+    left: 1px;
   }
 }

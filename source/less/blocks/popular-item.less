@@ -1,8 +1,8 @@
 .popular-item {
   position: relative;
 
-  margin: 0 auto 35px;
-  padding: 30px 30px 42px;
+  margin: 0 auto 27px;
+  padding: 27px 30px 42px;
   width: 260px;
 
   &::after {
@@ -22,13 +22,15 @@
 .popular-item__header {
   position: relative;
 
-  margin: 0 0 33px;
+  margin: 0 0 23px;
 
   .font-main-header();
 }
 
 .popular-item__text {
   display: block;
+
+  padding-top: 5px;
 
   color: @color-light-green;
   font-size: 17px;
@@ -37,14 +39,20 @@
   text-transform: uppercase;
 }
 
+.popular-item__img {
+  margin-bottom: 16px;
+}
+
 .popular-item__description {
-  margin: 0 0 25px;
+  margin: 0 0 15px;
 
   line-height: 24px;
 }
 
 .popular-item__price {
   text-align: center;
+
+  margin: 0 0 25px;
 
   font-size: 17px;
   font-weight: 700;
@@ -53,8 +61,8 @@
 
 @media (min-width: @tablet-width) {
   .popular-item {
-    margin-bottom: 55px;
-    padding: 30px 50px 68px;
+    margin-bottom: 50px;
+    padding: 0 50px 68px;
     width: 668px;
 
     &::after {
@@ -65,8 +73,6 @@
   }
 
   .popular-item__wrapper-content {
-    //position: relative;
-
     width: 290px;
   }
 
@@ -74,6 +80,7 @@
     display: flex;
     z-index: 1;
 
+    margin-bottom: 50px;
     width: 668px;
 
     .font-main-header(43px, 50px);
@@ -82,10 +89,17 @@
   .popular-item__text {
     text-align: center;
 
-    margin-left: auto;
+    margin: 7px 0 0 auto;
     width: 130px;
 
     line-height: 17px;
+  }
+
+  .popular-item__description {
+    margin-bottom: 32px;
+
+    font-size: 17px;
+    line-height: 30px;
   }
 
   .popular-item__img {
@@ -95,11 +109,19 @@
 
     margin-left: 44px;
   }
+
+  .popular-item__price {
+    margin-bottom: 34px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .popular-item {
-    padding-top: 50px;
+    margin-bottom: 59px;
+    padding: 53px 50px 97px;
     width: 1050px;
 
     &::after {
@@ -121,12 +143,16 @@
     .font-main-header(53px, 57px);
   }
 
+  .popular-item__description {
+    margin-bottom: 42px;
+  }
+
   .popular-item__text {
     order: -1;
 
     box-sizing: border-box;
     margin-left: 0;
-    padding: 0 25px;
+    padding: 8px 35px 0 25px;
     width: 175px;
   }
 

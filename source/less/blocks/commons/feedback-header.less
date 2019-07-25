@@ -6,4 +6,32 @@
   font-weight: 700;
   line-height: 16px;
   text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 62px;
+    top: 7px;
+
+    height: 1px;
+    width: 198px;
+
+    background-color: @color-light-green;
+  }
+
+  &--email {
+    &::after {
+      left: 81px;
+
+      width: 179px;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .feedback-header {
+    &::after {
+      background-color: transparent;
+    }
+  }
 }

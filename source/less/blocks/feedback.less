@@ -1,4 +1,37 @@
-.feedback__text {
+.feedback {
+  position: relative;
+
+  margin: 0 auto 55px;
+  padding: 0 30px;
+  width: 260px;
+}
+
+.feedback__description {
+  margin: 0 0 26px;
+
   font-size: 13px;
   line-height: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback {
+    margin: 0 0 50px;
+    padding: 0;
+    width: auto;
+  }
+
+  .feedback__description {
+    margin: 0 auto 5px;
+    padding: 0 50px;
+    width: 668px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback__description {
+    width: 700px;
+  }
 }

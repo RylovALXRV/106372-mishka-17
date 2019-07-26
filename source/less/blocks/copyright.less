@@ -7,6 +7,8 @@
   padding: 22px 30px;
   width: 260px;
 
+  cursor: pointer;
+
   &:hover .copyright__svg,
   &:focus .copyright__svg {
     fill: #46c1ae;
@@ -14,6 +16,11 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  &:focus {
+    box-shadow: 0 0 5px 3px @color-light-green;
+    outline: none;
   }
 }
 

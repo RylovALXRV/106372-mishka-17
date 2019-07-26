@@ -8,8 +8,14 @@
   line-height: 18px;
 }
 
+.feedback-form a:focus,
+.feedback-form button:focus {
+  box-shadow: 0 0 5px 3px @color-light-green;
+  outline: none;
+}
+
 .feedback-form__item {
-  margin-bottom: 45px;
+  margin-bottom: 33px;
 }
 
 .feedback-form__text {
@@ -67,7 +73,6 @@
   .feedback-form__btn {
     order: -1;
 
-    margin-right: auto;
     width: 230px;
   }
 }

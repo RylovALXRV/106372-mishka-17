@@ -4,6 +4,13 @@
   position: relative;
 }
 
+.navigation button {
+  &:focus {
+    box-shadow: 0 0 5px 3px @color-light-green;
+    outline: none;
+  }
+}
+
 .navigation__menu-list {
   display: flex;
   flex-direction: column;
@@ -47,6 +54,11 @@
   &:active {
     color: fade(@color-black, 30%);
   }
+
+  &:focus {
+    box-shadow: 0 0 5px 3px @color-light-green;
+    outline: none;
+  }
 }
 
 .navigation__link {
@@ -80,6 +92,7 @@
   top: 28px;
 
   border: 0;
+  border-radius: 50%;
   height: 27px;
   width: 27px;
 

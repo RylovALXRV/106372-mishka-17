@@ -1,5 +1,6 @@
 .radio-filter__item {
-  margin-bottom: 23px;
+  margin-bottom: 2px;
+  padding: 11px 0;
 
   &:last-child {
     margin-bottom: 0;
@@ -24,6 +25,14 @@
     height: 40px;
     width: 40px;
   }
+
+  &:hover::before {
+    border-color: #62d1ba;
+  }
+
+  &:active::before {
+    border-color: fade(@main-color, 30%);
+  }
 }
 
 .radio-filter__input {
@@ -39,6 +48,11 @@
     width: 16px;
 
     background-color: @color-light-green;
+  }
+
+  &:focus ~ .radio-filter__label::before {
+    box-shadow: 0 0 5px 3px @color-light-green;
+    outline: none;
   }
 }
 
@@ -72,7 +86,8 @@
   }
 
   .radio-filter__item {
-    margin-bottom: 58px;
+    padding: 15px 0 19px;
+    margin-bottom: 23px;
 
     &:last-child {
       margin-bottom: 0;

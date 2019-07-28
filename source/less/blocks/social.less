@@ -2,7 +2,7 @@
   border-bottom: 1px solid #e5e5e5;
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 25px 30px;
+  padding: 25px 30px 22px;
   width: 260px;
 }
 
@@ -38,6 +38,11 @@
   &:active .social__svg {
     fill: fade(#46c1ae, 30%);
   }
+
+  &:focus {
+    box-shadow: 0 0 5px 3px @color-light-green;
+    outline: none;
+  }
 }
 
 .social__svg {
@@ -48,7 +53,10 @@
   .social {
     border-bottom: 0;
     padding: 0;
-    //width: 310px;
+  }
+
+  .social__list {
+    margin-top: 6px;
   }
 }
 
@@ -59,5 +67,7 @@
 
   .social__list {
     justify-content: center;
+
+    margin-top: 5px;
   }
 }

@@ -1,11 +1,13 @@
 .copyright {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 
   margin: 0 auto;
   padding: 22px 30px;
   width: 260px;
+
+  cursor: pointer;
 
   &:hover .copyright__svg,
   &:focus .copyright__svg {
@@ -15,10 +17,15 @@
   &:active {
     opacity: 0.3;
   }
+
+  &:focus {
+    box-shadow: 0 0 5px 3px @color-light-green;
+    outline: none;
+  }
 }
 
 .copyright__text {
-  margin: 0 30px 0 0;
+  margin: 5px 30px 0 0;
 
   color: @color-black;
   font-size: 19px;
@@ -41,7 +48,7 @@
 
 @media (min-width: @tablet-width) {
   .copyright {
-    margin: 0 0 0 auto;
+    margin: 6px 0 0 auto;
     padding: 0 0 0 10px;
     width: auto;
   }
@@ -49,6 +56,7 @@
 
 @media (min-width: @desktop-width) {
   .copyright {
+    margin: 4px 2px 0 auto;
     padding-left: 30px;
   }
 }

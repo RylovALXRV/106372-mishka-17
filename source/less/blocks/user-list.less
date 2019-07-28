@@ -15,22 +15,30 @@
 
 .user-list__svg {
   position: absolute;
-  left: 0;
-  top: 26px;
+  left: 2px;
+  top: 29px;
 
   fill: fade(#221f1f, 20%);
 }
 
 @media (min-width: @tablet-width) {
+  .user-list__item .user-list__link {
+    padding: 31px 0 33px 80px;
+    width: 263px;
+  }
+
   .user-list__item {
     border-left: 1px solid #dfdfdf;
-
-    &--basket a {
-      padding-left: 78px;
-    }
   }
 
   .user-list__svg {
-    left: 31px;
+    left: 30px;
+    top: 34px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-list__item .user-list__link {
+    width: 268px;
   }
 }

@@ -2,8 +2,7 @@
   display: flex;
   flex-direction: column;
 
-  margin: 0 0 25px;
-  //width: 320px;
+  margin: 0 0 39px;
 }
 
 .map__iframe {
@@ -18,11 +17,20 @@
 .map__btn {
   margin: 0 auto;
   width: 260px;
+
+  &:focus {
+    box-shadow: 0 0 5px 3px @color-light-green;
+    outline: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .map {
     margin-bottom: 57px;
+  }
+
+  .map__iframe {
+    margin-bottom: 55px;
   }
 
   .map__btn {

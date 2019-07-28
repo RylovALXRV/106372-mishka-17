@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
 
-  margin: 0 auto 25px;
+  margin: 0 auto 27px;
   padding: 0 30px;
   width: 260px;
 
@@ -31,8 +31,8 @@
   flex-grow: 1;
   position: relative;
 
-  margin-bottom: 30px;
-  padding-top: 50px;
+  margin-bottom: 27px;
+  padding-top: 56px;
 
   &::before {
     content: "";
@@ -41,67 +41,73 @@
 
   &--eco {
     &::before {
-      top: 0;
+      left: 9px;
+      top: 1px;
 
       height: 37px;
       width: 32px;
 
-      background: url("../../img/icon-feature-flower.svg") no-repeat;
+      background: url("../img/icon-feature-flower.svg") no-repeat;
     }
   }
 
   &--price {
     &::before {
-      top: 0;
+      left: 1px;
+      top: 2px;
 
       height: 27px;
       width: 47px;
 
-      background: url("../../img/icon-feature-money.svg") no-repeat;
+      background: url("../img/icon-feature-money.svg") no-repeat;
     }
   }
 
   &--popular {
     &::before {
-      top: 0;
+      left: 8px;
+      top: 7px;
 
       height: 27px;
       width: 34px;
 
-      background: url("../../img/icon-feature-heart.svg") no-repeat;
+      background: url("../img/icon-feature-heart.svg") no-repeat;
     }
   }
 
   &--handwork {
     &::before {
-      top: 0;
+      left: 4px;
+      top: 4px;
 
       height: 35px;
       width: 35px;
 
-      background: url("../../img/icon-feature-ball.svg") no-repeat;
+      background: url("../img/icon-feature-ball.svg") no-repeat;
     }
   }
 
   &--home {
     &::before {
-      top: 0;
+      left: -5px;
+      top: 5px;
 
       height: 23px;
       width: 55px;
 
-      background: url("../../img/icon-feature-rocket.svg") no-repeat;
+      background: url("../img/icon-feature-rocket.svg") no-repeat;
     }
   }
 
   &--package {
     &::before {
-      top: 0;
+      left: 4px;
+      top: 3px;
 
       height: 32px;
       width: 33px;
 
-      background: url("../../img/icon-feature-gift.svg") no-repeat;
+      background: url("../img/icon-feature-gift.svg") no-repeat;
     }
   }
 }
@@ -138,7 +144,7 @@
   }
 
   .info__header {
-    margin-bottom: 45px;
+    margin-bottom: 47px;
 
     .font-main-header(43px, 50px);
   }
@@ -146,10 +152,14 @@
   .info__list {
     display: block;
 
+    width: 653px;
+
     column-count: 2;
   }
 
   .info__item {
+    margin-bottom: 55px;
+
     break-inside: avoid;
 
     font-size: 20px;
@@ -182,11 +192,16 @@
 @media (min-width: @desktop-width) {
   .info {
     box-sizing: border-box;
+    margin-bottom: 34px;
     padding: 0 175px;
     width: 1050px;
   }
 
   .info__header {
     .font-main-header(53px, 57px);
+  }
+
+  .info__list {
+    width: 683px;
   }
 }

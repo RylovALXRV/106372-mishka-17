@@ -3,7 +3,6 @@
 
   margin: 0 auto 27px;
   padding: 27px 30px 42px;
-  width: 260px;
 
   &::after {
     content: "";
@@ -32,6 +31,11 @@
   .font-main-header();
 }
 
+.popular-item__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .popular-item__text {
   display: block;
 
@@ -45,13 +49,20 @@
 }
 
 .popular-item__img {
+  flex-grow: 1;
+
   margin-bottom: 16px;
+  width: 100%;
 }
 
 .popular-item__description {
-  margin: 0 0 15px;
+  margin: 0 0 10px;
 
   line-height: 24px;
+
+  &:last-of-type {
+    margin-bottom: 15px;
+  }
 }
 
 .popular-item__price {
@@ -66,9 +77,10 @@
 
 @media (min-width: @tablet-width) {
   .popular-item {
-    margin-bottom: 50px;
+    box-sizing: border-box;
+    margin: 0 0 50px;
     padding: 0 50px 68px;
-    width: 668px;
+    width: 100%;
 
     &::after {
       height: 15px;
@@ -77,8 +89,10 @@
     }
   }
 
-  .popular-item__wrapper-content {
-    width: 290px;
+  .popular-item__wrapper {
+    box-sizing: border-box;
+    padding-right: 44px;
+    width: 50%;
   }
 
   .popular-item__header {
@@ -86,7 +100,6 @@
     z-index: 1;
 
     margin-bottom: 50px;
-    width: 668px;
 
     .font-main-header(43px, 50px);
   }
@@ -101,18 +114,22 @@
   }
 
   .popular-item__description {
-    margin-bottom: 32px;
-
     font-size: 17px;
     line-height: 30px;
+
+    &:last-of-type {
+      margin-bottom: 32px;
+    }
   }
 
   .popular-item__img {
     position: absolute;
-    right: 50px;
+    left: 50%;
     top: 105px;
 
-    margin-left: 44px;
+    box-sizing: border-box;
+    padding: 0 50px 0 0;
+    width: 50%;
   }
 
   .popular-item__price {
@@ -125,21 +142,37 @@
 
 @media (min-width: @desktop-width) {
   .popular-item {
-    margin-bottom: 59px;
-    padding: 53px 50px 97px;
-    width: 1050px;
+    margin: 0 auto 59px;
+    padding: 53px 50px 0;
+    width: 1150px;
 
     &::after {
-      height: 23px;
+      background-image: none;
     }
   }
 
   .popular-item__wrapper-content {
-    width: 467px;
+    padding-bottom: 97px;
+    width: 50%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50px;
+
+      height: 23px;
+      width: 1050px;
+
+      background-image: url("../../img/bg-zigzag-line.svg");
+    }
   }
 
   .popular-item__wrapper {
+    box-sizing: border-box;
     padding-left: 175px;
+    padding-right: 58px;
+    width: 100%;
   }
 
   .popular-item__header {
@@ -149,7 +182,11 @@
   }
 
   .popular-item__description {
-    margin-bottom: 42px;
+    padding-right: 10px;
+
+    &:last-of-type {
+      margin-bottom: 42px;
+    }
   }
 
   .popular-item__text {

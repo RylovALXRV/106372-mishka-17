@@ -4,7 +4,6 @@
 
   margin: 0 auto 27px;
   padding: 0 30px;
-  width: 260px;
 
   color: @color-black;
   font-size: 17px;
@@ -113,34 +112,34 @@
 }
 
 .info__text {
+  box-sizing: border-box;
   margin: 0;
   width: 100%;
 
   &--eco {
-    width: 195px;
+    padding-right: 75px;
   }
 
   &--price {
-    width: 205px;
+    padding-right: 35px;
   }
 
   &--popular {
-    width: 190px;
+    padding-right: 35px;
   }
 
   &--handwork {
-    width: 220px;
+    padding-right: 35px;
   }
 
   &--package {
-    width: 210px;
+    padding-right: 35px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .info {
     padding: 0 50px;
-    width: 668px;
   }
 
   .info__header {
@@ -152,9 +151,10 @@
   .info__list {
     display: block;
 
-    width: 653px;
+    width: 100%;
 
     column-count: 2;
+    column-gap: 0;
   }
 
   .info__item {
@@ -168,23 +168,11 @@
 
   .info__text {
     &--eco {
-      width: 220px;
-    }
-
-    &--price {
-      width: 245px;
-    }
-
-    &--popular {
-      width: 220px;
-    }
-
-    &--handwork {
-      width: 260px;
+      padding-right: 105px;
     }
 
     &--package {
-      width: 240px;
+      padding-right: 40px;
     }
   }
 }
@@ -202,6 +190,32 @@
   }
 
   .info__list {
-    width: 683px;
+    width: 700px;
+  }
+
+  .info__text {
+    &--eco {
+      padding-right: 125px;
+    }
+
+    &--price {
+      padding-right: 100px;
+    }
+
+    &--popular {
+      padding-right: 100px;
+    }
+
+    &--handwork {
+      padding-right: 85px;
+    }
+
+    &--home {
+      padding-right: 35px;
+    }
+
+    &--package {
+      padding-right: 100px;
+    }
   }
 }

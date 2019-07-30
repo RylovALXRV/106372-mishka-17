@@ -4,10 +4,14 @@
 }
 
 .review__text {
-  margin: 0 0 28px;
+  margin: 0 0 10px;
 
   font-size: 15px;
   line-height: 30px;
+
+  &:last-of-type {
+    margin-bottom: 28px;
+  }
 }
 
 .review__full-name {
@@ -24,9 +28,11 @@
 
 @media (min-width: @tablet-width) {
   .review__text {
-    margin-bottom: 57px;
-
     font-size: 17px;
+
+    &:last-of-type {
+      margin-bottom: 57px;
+    }
   }
 
   .review__full-name {
@@ -38,8 +44,11 @@
 
 @media (min-width: @desktop-width) {
   .review__text {
-    margin-bottom: 37px;
     padding-right: 75px;
+
+    &:last-of-type {
+      margin-bottom: 37px;
+    }
   }
 
   .review__full-name {

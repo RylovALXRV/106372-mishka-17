@@ -55,13 +55,20 @@
 }
 
 @media (min-width: @tablet-width) {
+  .checkbox-filter {
+    justify-content: space-between;
+  }
+
   .checkbox-filter__item {
     margin-bottom: 24px;
     padding: 15px 0 19px;
 
-    &:nth-child(odd) .checkbox-filter__label {
-      box-sizing: border-box;
-      width: 262px;
+    &:nth-child(odd) {
+      width: 52%;
+    }
+
+    &:nth-child(even) {
+      width: 48%;
     }
   }
 
@@ -90,6 +97,14 @@
 }
 
 @media (min-width: @desktop-width) {
+  .checkbox-filter {
+    justify-content: flex-start;
+  }
+
+  .checkbox-filter .checkbox-filter__item {
+    width: auto;
+  }
+
   .checkbox-filter__label {
     box-sizing: border-box;
     width: 262px;

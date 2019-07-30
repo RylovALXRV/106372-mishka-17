@@ -1,7 +1,6 @@
 .manufacturing-process {
-  margin: 0 auto 58px;
+  margin: 0 0 58px;
   padding: 0 30px;
-  width: 260px;
 }
 
 .manufacturing-process a:focus,
@@ -102,11 +101,15 @@
 }
 
 .manufacturing-process__text {
-  margin: 0 0 25px;
+  margin: 0 0 10px;
   padding: 0 35px 0 33px;
 
   font-size: 13px;
   line-height: 24px;
+
+  &:last-of-type {
+    margin-bottom: 25px;
+  }
 }
 
 .manufacturing-process__btn {
@@ -115,8 +118,8 @@
 
 @media (min-width: @tablet-width) {
   .manufacturing-process {
+    margin-bottom: 63px;
     padding: 0 50px;
-    width: 668px;
   }
 
   .manufacturing-process__container {
@@ -126,13 +129,15 @@
   .manufacturing-process__header {
     border: 1px solid #ececec;
     border-bottom: 0;
+    margin-bottom: 8px;
     padding-left: 106px;
+    padding-top: 37px;
 
     font-size: 20px;
 
     &::before {
       left: 41px;
-      top: 18px;
+      top: 32px;
     }
   }
 
@@ -140,21 +145,29 @@
     order: -1;
   }
 
-  .manufacturing-process__text {
-    padding: 0 41px 0 44px;
-
-    font-size: 15px;
-    line-height: 30px;
+  .manufacturing-process__video {
+    height: 455px;
   }
 
   .manufacturing-process__wrapper-bottom {
     border: 1px solid #ececec;
     border-top: 0;
-    padding: 0 0 45px;
+    padding: 0 41px 45px 40px;
+  }
+
+  .manufacturing-process__text {
+    padding: 0;
+
+    font-size: 15px;
+    line-height: 30px;
+
+    &:last-of-type {
+      margin-bottom: 35px;
+    }
   }
 
   .manufacturing-process__btn {
-    margin: 0 41px;
+    margin: 0;
   }
 }
 
@@ -171,14 +184,14 @@
     position: relative;
 
     border: 1px solid #ececec;
-    padding: 46px 58px 59px 760px;
+    padding: 40px 58px 59px 760px;
   }
 
   .manufacturing-process__header {
     border: 0;
     box-sizing: border-box;
-    margin: 0 0 36px 0;
-    padding: 50px 0 0 0;
+    margin: 0 0 33px 0;
+    padding: 54px 0 0 0;
 
     &::before {
       left: 0;
@@ -202,6 +215,10 @@
 
   .manufacturing-process__text {
     padding: 0;
+
+    &:last-of-type {
+      margin-bottom: 46px;
+    }
   }
 
   .manufacturing-process__btn {

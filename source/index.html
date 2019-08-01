@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Мишка</title>
+    <script src="js/picturefill.min.js"></script>
   </head>
   <body>
 
@@ -32,7 +33,7 @@
         </ul>
         <ul class="navigation__menu-list navigation__menu-list--user user-list">
           <li class="user-list__item user-list__item--form">
-            <form action="https://echo.htmlacademy.ru" method="get" class="search-form">
+            <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
               <div class="search-form__wrapper">
                 <label class="visually-hidden" for="search">Поиск по сайту</label>
                 <input class="search-form__input" type="search" name="search-field" id="search"
@@ -111,15 +112,17 @@
                 </tr>
               </tbody>
             </table>
-            <picture>
-              <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg">
-              <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg">
-              <img class="popular-item__img" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
-            </picture>
+            <p class="popular-item__wrapper-image">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+                <img class="popular-item__img" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg" width="260" height="315" alt="Вязаные корзинки">
+              </picture>
+            </p>
             <p class="popular-item__price">Цена:
               <span class="js-price">990 руб.</span>
             </p>
-            <a class="popular-item__btn btn" href="#">Заказать</a>
+            <a class="popular-item__btn btn js-order" href="#">Заказать</a>
           </div>
         </div>
       </section>
@@ -284,7 +287,7 @@
               <label class="switcher__label btn" for="size-large">l</label>
             </li>
           </ul>
-          <button class="basket-form__btn btn" type="submit">Добавить</button>
+          <button class="basket-form__btn btn js-add" type="submit">Добавить</button>
         </form>
       </section>
     </div>

@@ -119,12 +119,29 @@
   }
 
   .handwork__list {
+    position: relative;
     flex-direction: row;
 
     padding: 0 50px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+
+      height: 23px;
+      width: 100%;
+
+      background: url("../img/bg-zigzag-fill.svg") no-repeat;
+      background-position-x: center;
+      background-size: cover;
+    }
   }
 
   .handwork__item {
+    position: relative;
+
     width: 50%;
   }
 
@@ -172,6 +189,12 @@
 
   .handwork__list {
     padding: 0;
+
+    &::after {
+      bottom: -21px;
+
+      height: 37px;
+    }
   }
 
   .handwork__link {

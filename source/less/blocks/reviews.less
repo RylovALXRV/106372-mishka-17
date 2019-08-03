@@ -108,7 +108,12 @@
       height: 457px;
       width: 350px;
 
-      background: url("../img/review@1x.jpg") no-repeat;
+      background-image: url("../img/review@1x.jpg");
+      background-repeat: no-repeat;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/review@2x.jpg");
+      }
     }
 
     &::after {

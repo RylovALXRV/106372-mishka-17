@@ -1,7 +1,12 @@
 .handwork {
   padding-top: 70px;
 
-  background: #fafafa url("../img/hero-mobile@1x.jpg") no-repeat top;
+  background: #fafafa url("../img/hero-mobile@1x.jpg") no-repeat center -18px;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+    background-size: 576px;
+  }
 }
 
 .handwork a:focus {
@@ -101,13 +106,21 @@
 @media (min-width: @tablet-width) {
   .handwork {
     margin-bottom: 47px;
+    padding-top: 153px;
 
     background-image: url("../img/hero-tablet@1x.jpg");
+    background-position-y: -1px;
+    background-size: auto;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/hero-tablet@2x.jpg");
+      background-size: 1153px;
+    }
   }
 
   .handwork__wrapper {
     margin: 0 auto;
-    padding: 83px 0 0;
+    padding: 0 50px;
   }
 
   .handwork__header {
@@ -119,12 +132,27 @@
   }
 
   .handwork__list {
+    position: relative;
     flex-direction: row;
 
-    padding: 0 50px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+
+      height: 23px;
+      width: 100%;
+
+      background: url("../img/bg-zigzag-fill.svg") no-repeat;
+      background-position-x: center;
+      background-size: cover;
+    }
   }
 
   .handwork__item {
+    position: relative;
+
     width: 50%;
   }
 
@@ -156,10 +184,13 @@
     padding-top: 154px;
 
     background-image: url("../img/hero-desktop@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/hero-desktop@2x.jpg");
+    }
   }
 
   .handwork__wrapper {
-    padding: 0 50px;
     width: 1050px;
   }
 
@@ -172,6 +203,12 @@
 
   .handwork__list {
     padding: 0;
+
+    &::after {
+      bottom: -21px;
+
+      height: 37px;
+    }
   }
 
   .handwork__link {

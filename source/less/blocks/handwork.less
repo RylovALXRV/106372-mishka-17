@@ -105,12 +105,29 @@
 
 @media (min-width: @tablet-width) {
   .handwork {
-    margin-bottom: 47px;
+    position: relative;
+
+    margin-bottom: 43px;
     padding-top: 153px;
 
     background-image: url("../img/hero-tablet@1x.jpg");
     background-position-y: -1px;
     background-size: auto;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+
+      height: 24px;
+      width: 100%;
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-position: center;
+      background-repeat: repeat-x;
+      background-size: 768px;
+    }
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/hero-tablet@2x.jpg");
@@ -132,22 +149,7 @@
   }
 
   .handwork__list {
-    position: relative;
     flex-direction: row;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-
-      height: 23px;
-      width: 100%;
-
-      background: url("../img/bg-zigzag-fill.svg") no-repeat;
-      background-position-x: center;
-      background-size: cover;
-    }
   }
 
   .handwork__item {
@@ -158,7 +160,7 @@
 
   .handwork__link {
     box-sizing: border-box;
-    padding: 28px 35px 29px;
+    padding: 28px 35px 33px;
     width: 100%;
 
     font-size: 20px;
@@ -180,10 +182,18 @@
 
 @media (min-width: @desktop-width) {
   .handwork {
-    margin-bottom: 73px;
+    margin-bottom: 69px;
     padding-top: 154px;
 
     background-image: url("../img/hero-desktop@1x.jpg");
+
+    &::after {
+      bottom: -16px;
+
+      height: 36px;
+
+      background-size: 1250px;
+    }
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/hero-desktop@2x.jpg");
@@ -203,12 +213,6 @@
 
   .handwork__list {
     padding: 0;
-
-    &::after {
-      bottom: -21px;
-
-      height: 37px;
-    }
   }
 
   .handwork__link {

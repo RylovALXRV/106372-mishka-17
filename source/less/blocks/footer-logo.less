@@ -1,6 +1,11 @@
 .footer-logo {
   display: none;
 
+  &:focus {
+    box-shadow: 0 0 5px 3px @color-light-green;
+    outline: none;
+  }
+
   &:hover .footer-logo__svg,
   &:focus .footer-logo__svg {
     fill: #46c1ae;

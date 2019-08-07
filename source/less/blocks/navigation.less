@@ -205,9 +205,13 @@
 
     &--nav {
       position: absolute;
-      left: 50px;
+      //left: 50px;
+      left: 0;
       top: 100%;
+
+      box-sizing: border-box;
       margin-top: 20px;
+      padding-left: 50px;
 
       font-size: 15px;
     }
@@ -220,10 +224,16 @@
   .navigation__text {
     display: block;
     position: absolute;
-    right: 50px;
+    //right: 50px;
+    right: 0;
     top: 100%;
+    text-align: right;
 
+    box-sizing: border-box;
     margin-top: 18px;
+    padding-left: 20px;
+    padding-right: 50px;
+    width: 40%;
   }
 }
 

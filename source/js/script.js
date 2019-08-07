@@ -5,20 +5,11 @@ var jsOrderElements = document.querySelectorAll(".js-order");
 var modalWrapperElement = document.querySelector(".modal-wrapper");
 var jsAddElement = document.querySelector(".js-add");
 
-function findParentElement(elem) {
-  while (elem !== this) {
-    if (elem.classList.contains("js-order")) {
-      return elem;
-    }
-    elem = elem.parentNode;
-  }
-}
-
 function addOrderButtonClickHandler (button) {
   button.addEventListener("click", function (event) {
     event.preventDefault();
-    var target = findParentElement(event.target);
-    if (!target.classList.contains("js-order")) {
+    var currentTarget = event.currentTarget;
+    if (!currentTarget.classList.contains("js-order")) {
       return;
     }
     modalWrapperElement.classList.remove("hidden");

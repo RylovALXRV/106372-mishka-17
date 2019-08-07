@@ -4,7 +4,7 @@
   position: relative;
 
   margin: 0 auto;
-  padding: 0 30px 51px;
+  padding: 0 30px 50px;
 
   &::after {
     content: "";
@@ -16,7 +16,9 @@
     width: 100%;
 
     background-image: url("../img/bg-zigzag-line.svg");
-    background-size: contain;
+    background-position-x: 8px;
+    background-repeat: repeat-x;
+    background-size: 320px;
   }
 }
 
@@ -118,6 +120,9 @@
 
     &::after {
       height: 15px;
+
+      background-position-x: 19px;
+      background-size: 768px;
     }
   }
 
@@ -163,7 +168,8 @@
     &::after {
       height: 23px;
 
-      background-size: cover;
+      background-position-x: 26px;
+      background-size: 1050px;
     }
   }
 

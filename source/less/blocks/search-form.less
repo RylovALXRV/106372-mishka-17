@@ -48,19 +48,19 @@
   width: 18px;
 
   background-color: transparent;
-}
 
-.search-form__svg {
-  fill: fade(#221f1f, 20%);
-
-  &:hover,
-  &:focus {
+  &:hover .search-form__svg,
+  &:focus .search-form__svg {
     fill: @color-light-green;
   }
 
   &:active {
     fill: fade(@color-light-green, 30%);
   }
+}
+
+.search-form__svg {
+  fill: fade(#221f1f, 20%);
 }
 
 @media (min-width: @tablet-width) {

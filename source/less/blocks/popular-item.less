@@ -1,8 +1,8 @@
 .popular-item {
   position: relative;
 
-  margin: 0 auto 27px;
-  padding: 27px 30px 42px;
+  margin: 0 auto 28px;
+  padding: 27px 30px 41px;
 
   &::after {
     content: "";
@@ -14,7 +14,9 @@
     width: 100%;
 
     background-image: url("../img/bg-zigzag-line.svg");
-    background-size: contain;
+    background-position-x: 8px;
+    background-repeat: repeat-x;
+    background-size: 320px;
   }
 }
 
@@ -91,7 +93,8 @@
     &::after {
       height: 15px;
 
-      background-size: contain;
+      background-position-x: 19px;
+      background-size: 768px;
     }
   }
 
@@ -160,25 +163,19 @@
     width: 1150px;
 
     &::after {
-      background-image: none;
+      left: 50px;
+
+      height: 23px;
+      width: 1050px;
+
+      background-position-x: 26px;
+      background-size: 1050px;
     }
   }
 
   .popular-item__wrapper-content {
     padding-bottom: 97px;
     width: 50%;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 50px;
-
-      height: 23px;
-      width: 1050px;
-
-      background-image: url("../img/bg-zigzag-line.svg");
-    }
   }
 
   .popular-item__wrapper {

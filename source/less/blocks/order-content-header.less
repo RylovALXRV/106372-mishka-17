@@ -10,10 +10,16 @@
 
 @media (min-width: @tablet-width) {
   .order-content-header {
+    position: relative;
+
     margin-bottom: 74px;
     padding: 93px 0 80px;
 
     .font-main-header(43px, 50px);
+
+    &::after {
+      .zigzag-fill-tablet(-15px);
+    }
   }
 }
 
@@ -23,5 +29,9 @@
     padding-bottom: 101px;
 
     .font-main-header(53px, 57px);
+
+    &::after {
+      .zigzag-fill-desktop(-20px, 34px);
+    }
   }
 }

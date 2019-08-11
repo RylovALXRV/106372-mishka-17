@@ -38,7 +38,7 @@
 
   background-color: @color-light-green;
 
-  &--toys {
+  &:nth-child(2n) {
     background-color: #56c3b2;
   }
 }
@@ -47,8 +47,8 @@
   display: block;
   position: relative;
 
-  padding: 25px 30px 30px;
   margin: 0 auto;
+  padding: 25px 30px 30px;
 
   color: @color-white;
   font-size: 19px;
@@ -115,18 +115,9 @@
     background-size: auto;
 
     &::after {
-      content: "";
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-
-      height: 24px;
-      width: 100%;
-
-      background-image: url("../img/bg-zigzag-fill.svg");
       background-position: center;
-      background-repeat: repeat-x;
-      background-size: 768px;
+
+      .zigzag-fill-tablet(-10px);
     }
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -150,6 +141,7 @@
 
   .handwork__list {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .handwork__item {
@@ -188,6 +180,7 @@
     background-image: url("../img/hero-desktop@1x.jpg");
 
     &::after {
+      .zigzag-fill-desktop(-16px, 36px, 1250px);
       bottom: -16px;
 
       height: 36px;

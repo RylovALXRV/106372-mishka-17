@@ -103,15 +103,17 @@
     &::before {
       content: "";
       position: absolute;
+      bottom: 84px;
       left: 0;
       top: 0;
       z-index: -1;
 
-      height: 457px;
+      height: auto;
       width: 350px;
 
       background-image: url("../img/review@1x.jpg");
       background-repeat: no-repeat;
+      background-size: cover;
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
         background-image: url("../img/review@2x.jpg");
@@ -164,6 +166,10 @@
     margin-bottom: 70px;
     padding: 0 0 185px 175px;
     width: 1050px;
+
+    &::before {
+      bottom: 91px;
+    }
 
     &::after {
       height: 23px;

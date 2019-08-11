@@ -6,10 +6,14 @@
 }
 
 .feedback__description {
-  margin: 0 0 25px;
+  margin: 0 0 10px;
 
   font-size: 13px;
   line-height: 24px;
+
+  &:last-of-type {
+    margin-bottom: 25px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -29,7 +33,11 @@
 
 @media (min-width: @desktop-width) {
   .feedback__description {
-    margin: 0 auto;
+    margin: 0 auto 10px;
     width: 700px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }

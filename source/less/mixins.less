@@ -3,3 +3,25 @@
   font-size: @font-size;
   line-height: @line-height;
 }
+
+.zigzag-fill-tablet(@bottom) {
+  content: "";
+  position: absolute;
+  bottom: @bottom;
+  left: 0;
+
+  height: 24px;
+  width: 100%;
+
+  background-image: url("../img/bg-zigzag-fill.svg");
+  background-repeat: repeat-x;
+  background-size: 768px;
+}
+
+.zigzag-fill-desktop(@bottom, @height, @background-size: 1150px) {
+  bottom: @bottom;
+
+  height: @height;
+
+  background-size: @background-size;
+}

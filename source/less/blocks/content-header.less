@@ -1,4 +1,5 @@
 .content-header {
+  position: relative;
   text-align: center;
 
   margin: 0 0 30px;
@@ -14,6 +15,10 @@
     padding: 95px 0 78px;
 
     .font-main-header(43px, 50px);
+
+    &::after {
+      .zigzag-fill-tablet(-15px);
+    }
   }
 }
 
@@ -23,5 +28,9 @@
     padding-bottom: 98px;
 
     .font-main-header(53px, 57px);
+
+    &::after {
+      .zigzag-fill-desktop(-20px, 34px);
+    }
   }
 }

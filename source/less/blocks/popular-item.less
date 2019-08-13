@@ -21,7 +21,7 @@
 }
 
 .popular-item a:focus {
-  box-shadow: 0 0 5px 3px @color-light-green;
+  box-shadow: 0 0 5px 3px fade(@color-light-green, 40%);
   outline: none;
 }
 
@@ -87,7 +87,7 @@
   .popular-item {
     box-sizing: border-box;
     margin: 0 0 50px;
-    padding: 0 50px 68px;
+    padding: 0 50px 68px 47px;
     width: 100%;
 
     &::after {
@@ -105,13 +105,18 @@
     padding-right: 378px;
   }
 
+  .popular-item__inner {
+    padding-left: 3px;
+  }
+
   .popular-item__header {
     display: flex;
     z-index: 1;
 
-    margin-bottom: 50px;
+    margin-bottom: 49px;
 
     .font-main-header(43px, 50px);
+    letter-spacing: -0.1px;
   }
 
   .popular-item__banner {
@@ -124,11 +129,13 @@
   }
 
   .popular-item__description {
+    max-width: 380px;
+
     font-size: 17px;
     line-height: 30px;
 
     &:last-of-type {
-      margin-bottom: 32px;
+      margin-bottom: 33px;
     }
   }
 
@@ -144,7 +151,7 @@
   }
 
   .popular-item__img {
-    height: 100%;
+    height: auto;
     width: 100%;
   }
 
@@ -158,8 +165,8 @@
 
 @media (min-width: @desktop-width) {
   .popular-item {
-    margin: 0 auto 59px;
-    padding: 53px 50px 0;
+    margin: 0 auto 57px;
+    padding: 52px 50px 0;
     width: 1150px;
 
     &::after {
@@ -178,25 +185,11 @@
     width: 50%;
   }
 
-  .popular-item__wrapper {
-    box-sizing: border-box;
-    padding-left: 175px;
-    padding-right: 58px;
-    width: 100%;
-  }
-
   .popular-item__header {
     width: 1050px;
 
     .font-main-header(53px, 57px);
-  }
-
-  .popular-item__description {
-    padding-right: 10px;
-
-    &:last-of-type {
-      margin-bottom: 42px;
-    }
+    letter-spacing: -0.2px;
   }
 
   .popular-item__banner {
@@ -205,7 +198,26 @@
     box-sizing: border-box;
     margin-left: 0;
     padding: 8px 35px 0 25px;
-    width: 175px;
+    width: 171px;
+  }
+
+  .popular-item__wrapper {
+    box-sizing: border-box;
+    padding-left: 175px;
+    padding-right: 58px;
+    width: 100%;
+  }
+
+  .popular-item__inner {
+    padding-left: 0;
+  }
+
+  .popular-item__description {
+    padding-right: 10px;
+
+    &:last-of-type {
+      margin-bottom: 48px;
+    }
   }
 
   .popular-item__wrapper-image {

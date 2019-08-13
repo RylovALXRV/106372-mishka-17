@@ -36,10 +36,11 @@
 }
 
 .radio-filter__input {
+  &:active ~ .radio-filter__label::after,
   &:checked ~ .radio-filter__label::after {
     content: "";
     position: absolute;
-    left: 13px;
+    left: 12px;
     top: 2px;
 
     border-radius: 50%;
@@ -50,9 +51,27 @@
     background-color: @color-light-green;
   }
 
+  &:checked:active ~ .radio-filter__label::after {
+    background-color: transparent;
+  }
+
   &:focus ~ .radio-filter__label::before {
     border-color: #62d1ba;
     outline: none;
+  }
+
+  &:disabled ~ .radio-filter__label::before,
+  &:disabled ~ .radio-filter__label::after {
+    border-color: @main-color;
+    opacity: 0.4;
+  }
+
+  &:disabled:active ~ .radio-filter__label::after {
+    background-color: transparent;
+  }
+
+  &:disabled:checked ~ .radio-filter__label::after {
+    background-color: @color-light-green;
   }
 }
 
@@ -75,8 +94,9 @@
     }
   }
 
-  .radio-filter__input:checked ~ .radio-filter__label {
-    &::after {
+  .radio-filter__input {
+    &:active ~ .radio-filter__label::after,
+    &:checked ~ .radio-filter__label::after {
       left: 16px;
       top: 1px;
 

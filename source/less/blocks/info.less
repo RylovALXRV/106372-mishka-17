@@ -3,7 +3,7 @@
   flex-direction: column;
 
   margin: 0 auto 27px;
-  padding: 0 30px;
+  padding: 0 30px 0 28px;
 
   color: @color-black;
   font-size: 17px;
@@ -20,7 +20,7 @@
 
 .info__list {
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 1px;
 
   list-style-type: none;
 }
@@ -32,6 +32,8 @@
 
   margin-bottom: 27px;
   padding-top: 56px;
+
+  letter-spacing: 0.2px;
 
   &::before {
     content: "";
@@ -139,18 +141,20 @@
 
 @media (min-width: @tablet-width) {
   .info {
-    padding: 0 50px;
+    padding: 0 50px 0 46px;
   }
 
   .info__header {
     margin-bottom: 47px;
 
     .font-main-header(43px, 50px);
+    letter-spacing: -0.2px;
   }
 
   .info__list {
     display: block;
 
+    padding-left: 4px;
     width: 100%;
 
     column-count: 2;
@@ -163,6 +167,7 @@
     break-inside: avoid;
 
     font-size: 20px;
+    letter-spacing: 0.1px;
     line-height: 22px;
   }
 
@@ -172,7 +177,7 @@
     }
 
     &--package {
-      padding-right: 40px;
+      padding-right: 45px;
     }
   }
 }
@@ -181,12 +186,13 @@
   .info {
     box-sizing: border-box;
     margin-bottom: 34px;
-    padding: 0 175px;
+    padding: 0 175px 0 171px;
     width: 1050px;
   }
 
   .info__header {
     .font-main-header(53px, 57px);
+    letter-spacing: -0.4px;
   }
 
   .info__list {

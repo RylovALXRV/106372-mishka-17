@@ -23,6 +23,7 @@ gulp.task("css", function () {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(less())
+    .pipe(gulp.dest("source/css"))
     .pipe(postcss([
       autoprefixer()
     ]))
@@ -37,7 +38,7 @@ gulp.task("compress", function () {
   return gulp.src("source/js/script.js")
     .pipe(uglify())
     .pipe(rename("script.min.js"))
-    .pipe(gulp.dest("source/js"))
+    .pipe(gulp.dest("build/js"))
     .pipe(server.stream());
 });
 
@@ -76,6 +77,11 @@ gulp.task("html", function () {
     .pipe(gulp.dest("build"))
 });
 
+gulp.task("refresh", function (done) {
+  server.reload();
+  done();
+});
+
 gulp.task("server", function () {
   server.init({
     server: "build/",
@@ -85,23 +91,17 @@ gulp.task("server", function () {
     ui: false
   });
 
-  gulp.task("refresh", function () {
-    server.reload();
-    done();
-  });
-
   gulp.watch("source/less/**/*.less", gulp.series("css"));
-  gulp.watch("source/js/**/*.js", gulp.series("compress", "refresh"));
+  gulp.watch("source/js/script.js", gulp.series("compress"));
   gulp.watch("source/img/sprite/*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
-  gulp.watch("source/*.html").on("change", server.reload);
 });
 
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**"
+    "source/js/picturefill.min.js"
   ], {
     base: "source"
   })

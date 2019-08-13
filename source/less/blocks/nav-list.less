@@ -3,11 +3,20 @@
   flex-wrap: wrap;
 }
 
+.nav-list__item {
+  border-bottom: 1px solid #ececec;
+}
+
 @media (min-width: @tablet-width) {
   .nav-list {
-    z-index: 1;
-
+    order: 1;
+    padding-left: 50px;
+    padding-top: 18px;
     width: 60%;
+  }
+
+  .nav-list__item {
+    border-bottom: 0;
   }
 
   .nav-list a {
@@ -20,16 +29,32 @@
 @media (min-width: @desktop-width) {
   .nav-list {
     flex-shrink: 0;
-    left: 0;
+    order: -1;
+    position: relative;
 
     padding: 0;
     width: 400px;
+
+    background-color: #ffffff;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      height: 1px;
+      width: 100%;
+
+      background-color: #ececec;
+    }
   }
 
   .nav-list a {
     margin: 0;
     padding: 31px 0 33px;
 
+    border-bottom: 1px solid #ececec;
     font-size: 17px;
   }
 

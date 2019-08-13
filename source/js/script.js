@@ -12,7 +12,7 @@ function addOrderButtonClickHandler (button) {
     if (!currentTarget.classList.contains("js-order")) {
       return;
     }
-    modalWrapperElement.classList.remove("hidden");
+    modalWrapperElement.classList.remove("modal-wrapper--close");
   });
 }
 
@@ -34,5 +34,5 @@ for (var i = 0; i < jsOrderElements.length; i++) {
 
 jsAddElement.addEventListener("click", function (event) {
   event.preventDefault();
-  modalWrapperElement.classList.add("hidden");
+  modalWrapperElement.classList.add("modal-wrapper--close");
 });

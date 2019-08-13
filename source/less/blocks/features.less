@@ -1,5 +1,5 @@
 .features {
-  margin-bottom: 24px;
+  margin-bottom: 27px;
   width: 100%;
 
   line-height: 20px;
@@ -11,30 +11,36 @@
   align-items: flex-start;
 }
 
-.features__row td {
-  &:first-of-type {
-    margin-right: 19px;
-    min-width: 75px;
-  }
-}
-
 .features__row {
   display: flex;
 
-  padding: 9px 0;
+  padding: 10px 0 9px;
   width: 100%;
 
   border-bottom: 1px solid #ececec;
 }
 
+.features__row td {
+  padding: 0;
+
+  &:first-of-type {
+    margin-right: 22px;
+    min-width: 75px;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .features {
-    margin-bottom: 52px;
+    margin-bottom: 55px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .features {
     margin-bottom: 107px;
+  }
+
+  .features__row {
+    padding: 7px 0 12px;
   }
 }

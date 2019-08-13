@@ -1,6 +1,7 @@
 .navigation {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   position: relative;
 }
 
@@ -19,7 +20,8 @@
 }
 
 .navigation--open .navigation__btn {
-  top: 28px;
+  right: 27px;
+  top: 26px;
 
   border-radius: 50%;
   height: 27px;
@@ -80,7 +82,7 @@
 
 .navigation button {
   &:focus {
-    box-shadow: 0 0 5px 3px @color-light-green;
+    box-shadow: 0 0 5px 3px fade(@color-light-green, 40%);
     outline: none;
   }
 }
@@ -102,7 +104,7 @@
 }
 
 .navigation__menu-list li {
-  border-bottom: 1px solid #ececec;
+  //border-bottom: 1px solid #ececec;
 }
 
 .navigation__menu-list a {
@@ -111,7 +113,7 @@
 
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 26px 0 27px 46px;
+  padding: 27px 0 27px 46px;
   width: 260px;
 
   color: @color-black;
@@ -127,7 +129,7 @@
   }
 
   &:focus {
-    box-shadow: 0 0 5px 3px @color-light-green;
+    box-shadow: 0 0 5px 3px fade(@color-light-green, 40%);
     outline: none;
   }
 }
@@ -174,7 +176,7 @@
     align-items: flex-start;
     z-index: 1;
 
-    padding: 0 50px;
+    background-color: #f9f9f9;
   }
 
   .navigation .nav-list,
@@ -182,14 +184,13 @@
     display: flex;
   }
 
-  .navigation li {
-    border-bottom: 0;
-  }
-
   .navigation__inner {
-    border: 0;
-    margin-right: auto;
-    padding: 22px 25px 0 0;
+    flex-grow: 1;
+
+    border-bottom: 1px solid #ececec;
+    padding: 22px 25px 20px 50px;
+
+    background-color: #ffffff;
   }
 
   .navigation__link {
@@ -204,13 +205,7 @@
     flex-direction: row;
 
     &--nav {
-      position: absolute;
-      //left: 50px;
-      left: 0;
-      top: 100%;
-
       box-sizing: border-box;
-      margin-top: 20px;
       padding-left: 50px;
 
       font-size: 15px;
@@ -223,16 +218,13 @@
 
   .navigation__text {
     display: block;
-    position: absolute;
-    //right: 50px;
-    right: 0;
-    top: 100%;
+    order: 2;
     text-align: right;
 
     box-sizing: border-box;
-    margin-top: 18px;
     padding-left: 20px;
     padding-right: 50px;
+    padding-top: 18px;
     width: 40%;
   }
 }
@@ -246,7 +238,11 @@
   }
 
   .navigation__inner {
-    padding-right: 46px;
+    flex-grow: 0;
+    position: relative;
+
+    padding-bottom: 8px;
+    padding-right: 103px;
     padding-top: 8px;
   }
 
@@ -255,17 +251,17 @@
       order: -1;
       position: relative;
 
-      margin-right: auto;
       margin-top: 0;
     }
 
     &--offer {
       display: block;
-      position: absolute;
-      left: 50px;
-      top: 100%;
 
       margin-top: 18px;
     }
+  }
+
+  .navigation__text {
+    padding-right: 0;
   }
 }

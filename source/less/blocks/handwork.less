@@ -10,7 +10,7 @@
 }
 
 .handwork a:focus {
-  box-shadow: 0 0 5px 3px @color-light-green;
+  box-shadow: 0 0 5px 3px fade(@color-light-green, 40%);
   outline: none;
 }
 
@@ -19,6 +19,7 @@
 
   margin: 0 auto 122px;
   padding: 0 30px;
+  width: 260px;
 
   .font-main-header(27px);
 }
@@ -36,9 +37,7 @@
 .handwork__item {
   position: relative;
 
-  background-color: @color-light-green;
-
-  &:nth-child(2n) {
+  &:nth-child(2n) .handwork__link {
     background-color: #56c3b2;
   }
 }
@@ -50,18 +49,27 @@
   margin: 0 auto;
   padding: 25px 30px 30px;
 
+  background-color: @color-light-green;
   color: @color-white;
   font-size: 19px;
   font-weight: 700;
   line-height: 24px;
   text-decoration: none;
 
+  &:hover {
+    top: -5px;
+
+    margin-bottom: -5px;
+    padding-bottom: 35px;
+  }
+
   &:hover::after,
   &:focus::after {
     opacity: 0.7;
   }
 
-  &:active {
+  &:active::after,
+  &:active .handwork__products-section {
     opacity: 0.3;
   }
 
@@ -108,10 +116,10 @@
     position: relative;
 
     margin-bottom: 43px;
-    padding-top: 153px;
+    padding-top: 107px;
 
     background-image: url("../img/hero-tablet@1x.jpg");
-    background-position-y: -1px;
+    background-position-y: -48px;
     background-size: auto;
 
     &::after {
@@ -134,7 +142,7 @@
   .handwork__header {
     margin-bottom: 373px;
     padding: 0 50px;
-    width: auto;
+    width: 568px;
 
     .font-main-header(43px, 50px);
   }
@@ -175,7 +183,6 @@
 @media (min-width: @desktop-width) {
   .handwork {
     margin-bottom: 69px;
-    padding-top: 154px;
 
     background-image: url("../img/hero-desktop@1x.jpg");
 
@@ -200,6 +207,7 @@
   .handwork__header {
     margin-bottom: 358px;
     padding: 0 175px;
+    width: auto;
 
     .font-main-header(53px, 57px);
   }

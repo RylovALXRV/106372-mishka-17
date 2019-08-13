@@ -1,3 +1,7 @@
+.user-list__item {
+  border-bottom: 1px solid #ececec;
+}
+
 .user-list__link {
   &:hover .user-list__svg,
   &:focus .user-list__svg {
@@ -15,20 +19,28 @@
 
 .user-list__svg {
   position: absolute;
-  left: 2px;
+  left: 1px;
   top: 29px;
 
   fill: fade(#221f1f, 20%);
 }
 
 @media (min-width: @tablet-width) {
+  .user-list {
+    background-color: #ffffff;
+  }
+
   .user-list__item .user-list__link {
     padding: 31px 0 33px 80px;
-    width: 263px;
+    width: 314px;
   }
 
   .user-list__item {
-    border-left: 1px solid #dfdfdf;
+    border-right: 1px solid #dfdfdf;
+
+    &:first-child {
+      border-left: 1px solid #dfdfdf;
+    }
   }
 
   .user-list__svg {
@@ -38,6 +50,33 @@
 }
 
 @media (min-width: @desktop-width) {
+  .user-list {
+    position: relative;
+
+    width: 348px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      height: 1px;
+      width: 100%;
+
+      background-color: #ececec;
+    }
+  }
+
+  .user-list__item {
+    border-left: 1px solid #ececec;
+    border-right: 0;
+  }
+
+  .user-list .user-list__link {
+    width: 263px;
+  }
+
   .user-list__link {
     &--basket {
       padding: 0;

@@ -58,18 +58,24 @@
     outline: none;
   }
 
+  &:disabled ~ .checkbox-filter__label {
+    pointer-events: auto;
+
+    opacity: 0.7;
+  }
+
   &:disabled ~ .checkbox-filter__label::before,
   &:disabled ~ .checkbox-filter__label::after {
     border-color: @main-color;
-    opacity: 0.4;
+    opacity: 0.7;
   }
 
   &:disabled:active ~ .checkbox-filter__label::after {
-    background-color: transparent;
+    background-image: none;
   }
 
   &:disabled:checked ~ .checkbox-filter__label::after {
-    background-color: @color-light-green;
+    background-image: url("../img/icon-tick.svg");
   }
 }
 

@@ -10,8 +10,10 @@
 @media (min-width: @tablet-width) {
   .nav-list {
     order: 1;
-    padding-left: 50px;
-    padding-top: 18px;
+    position: relative;
+    top: 18px;
+
+    max-height: 0;
     width: 60%;
   }
 
@@ -20,7 +22,7 @@
   }
 
   .nav-list a {
-    margin: 0 37px 5px 0;
+    margin: 0 36px 5px 0;
     padding: 0;
     width: auto;
   }
@@ -30,17 +32,32 @@
   .nav-list {
     flex-shrink: 0;
     order: -1;
+    top: 0;
+
+    max-height: none;
+    padding: 0;
+    width: 420px;
+  }
+
+  .nav-list__item {
     position: relative;
 
-    padding: 0;
-    width: 400px;
+    &:nth-of-type(odd) {
+      border-right: 1px solid #ececec;
 
-    background-color: #ffffff;
+      a {
+        padding-right: 35px;
+      }
+    }
 
+    &:nth-of-type(even) a {
+      padding-left: 34px;
+    }
+
+    &::before,
     &::after {
       content: "";
       position: absolute;
-      bottom: 0;
       left: 0;
 
       height: 1px;
@@ -48,29 +65,20 @@
 
       background-color: #ececec;
     }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: -1px;
+    }
   }
 
   .nav-list a {
     margin: 0;
     padding: 31px 0 33px;
 
-    border-bottom: 1px solid #ececec;
     font-size: 17px;
-  }
-
-  .nav-list__item {
-    &:nth-of-type(odd) {
-      border-right: 1px solid #ececec;
-
-      a {
-        padding-right: 34px;
-      }
-    }
-
-    &:nth-of-type(even) {
-      a {
-        padding-left: 34px;
-      }
-    }
   }
 }

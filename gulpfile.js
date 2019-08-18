@@ -14,7 +14,7 @@ var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
-var uglify = require("gulp-uglify");
+var uglifyJs = require("gulp-uglify");
 var htmlmin = require("gulp-htmlmin");
 var server = require("browser-sync").create();
 
@@ -39,7 +39,7 @@ gulp.task("css", function () {
 gulp.task("compress", function () {
   return gulp.src("source/js/script.js")
     .pipe(gulp.dest("build/js"))
-    .pipe(uglify())
+    .pipe(uglifyJs())
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("source/js"))
     .pipe(gulp.dest("build/js"))
